@@ -2,5 +2,5 @@
 .sass-cache/
 
 config.rb
-.sass/ie.scss
-.css/ie.css
+sass/ie.scss
+css/ie.css
