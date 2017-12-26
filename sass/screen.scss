@@ -2,11 +2,244 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
-@import "compass/reset";
-
-*{
-   color: red 
+@import "compass/reset"; 
+@mixin mauto() {
+    margin-right: auto;
+    margin-left: auto;
 }
-    
 
+$color-gray: #7f7f7f;
+$color-black: #141414;
+$thin:  'mullerthin';
+$light: 'mullerlight';
+$regular: 'mullerregular';
+$medium: 'mullermedium';
+$bold: 'mullerbold';
+$extrabold: 'mullerextrabold';
+$black: 'mullerblack';
+
+
+
+@mixin link_white ($width, $height, $border, $fsize) {
+    width: $width;
+    height: $height;
+    background-color: $color-black;
+    border: none;
+    text-align: center;
+    font-family: $regular;
+    color: #fff;
+    position: relative;
+    display: block;
+    line-height: $height - $border * 2;
+    font-size: $fsize;
+    transition: 0.5s;   
+    border: $border solid $color-black;
+}
+@mixin link_white_active {
+    background-color: transparent;
+    transition: 0.5s;
+    color:  $color-black;
+}
+
+@mixin h2 {
+    font-size: 52px;
+    text-align: center;
+    font-family: $bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+/*************************** general ***************************/
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: $regular;
+}
+#wrapper {
+    max-width: 1400px;
+    min-width: 320px;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:    0px 3px 20px 0px rgba(0, 0, 0, 0.3);
+    box-shadow:         0px 3px 20px 0px rgba(0, 0, 0, 0.3);
+    margin: 10px auto;
+}
+.section {
+    width: 1020px;
+    @include mauto;
+}
+
+
+/*************************** header ***************************/
+
+.header {
+    position: relative;
+    
+    .nav {
+        height: 140px;
+        padding-top: 20px;
+        width: 100%;
+        
+        .logo {
+            float: left;
+            width: 30%;
+            position: relation;
+            img {
+                height: 80px;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 20px; 
+            }
+            p {
+                font-size: 27px;
+                font-family: $medium;
+                line-height: 27px;
+                display: inline-block;
+                color: #404040;
+                vertical-align: middle;
+            }
+        }
+        .menu {
+            height: 80px;
+            line-height: 80px;
+            width: 60%;
+            float: right;
+            
+            &__items {
+                float: right;
+            }
+            &__item {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 16px;
+                margin-right: 35px;
+                
+            }
+            &__link {
+                text-decoration: none;
+                padding: 5px 0;
+                font-family: $regular;
+                text-shadow: 2px 0px 11px rgba(0, 0, 0, 0.20);
+            }
+            
+            &__home {
+                color: #404040 ; 
+                &:hover {  
+                    border-bottom: 1px solid darken(#404040, 5%);
+                }
+            }
+            &__portfolio {
+                color: #23c869 ;
+                &:hover { 
+                    border-bottom: 1px solid darken(#23c869, 5%);
+                }
+            }
+            &__about-me {
+                color: #23afc8 ;
+                &:hover { 
+                    border-bottom: 1px solid darken(#23afc8, 5%);
+                }
+            }
+            &__contacts {
+                color: #feb62b ;
+                &:hover {  
+                    border-bottom: 1px solid darken(#feb62b, 5%);
+                }
+            }
+            &__telegram img {
+                width: 35px;
+            }
+            
+        }
+    }
+    
+    &-inner {
+        min-height: 646px;
+        position: relative;
+        
+        h1 {
+            position: relative;
+            top: 190px;
+            font-family: $extrabold;
+            color: $color-black;
+            font-size: 60px;
+            text-transform: uppercase;
+            left: 80px;
+        }
+        .header__link {
+            @include link_white(260px, 60px, 3px, 26px);
+            left: 130px;
+            top: 260px;
+            font-family: $regular;
+            &:hover {
+                @include link_white_active;
+            }
+        }
+        img {
+            float: right;
+            position: relative;
+            top: -100px;
+        }
+    }
+}
+
+
+
+/*************************************************************/
+
+.portfolio {
+    clear: both;
+    width: 100%;
+    position: relative;
+    h2 {
+        @include h2;
+        display: block;
+        font-family: $bold;
+    }
+    &__items {
+        display: -webkit-flex; 
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        margin-bottom: 35px;
+    } 
+        &__link {
+            font-size: 20px;
+            font-family: $light;
+            padding: 3px 0;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                border-color: $color-black;
+                transition: 0.3s;
+            }
+            a { 
+                color: $color-gray;
+                &:hover {
+                    color: $color-black;
+                    transition: 0.3s;
+                }
+            }
+        }
+    
+        .works {
+            display: -webkit-flex; 
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            
+            .work {
+                flex-basis: 25%;
+                background-color: #ccc;
+                
+                img {
+                    //width: 100%;
+                }
+            }
+            
+        }    
+}

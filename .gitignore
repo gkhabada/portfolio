@@ -1,5 +1,7 @@
 # кэш
 .sass-cache/
+webdis/
+fonts/
 
 config.rb
 sass/ie.scss

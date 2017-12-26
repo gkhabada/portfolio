@@ -58,6 +58,192 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/*************************** general ***************************/
 * {
-  color: red;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "mullerregular";
+}
+
+#wrapper {
+  max-width: 1400px;
+  min-width: 320px;
+  -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.3);
+  margin: 10px auto;
+}
+
+.section {
+  width: 1020px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*************************** header ***************************/
+.header {
+  position: relative;
+}
+.header .nav {
+  height: 140px;
+  padding-top: 20px;
+  width: 100%;
+}
+.header .nav .logo {
+  float: left;
+  width: 30%;
+  position: relation;
+}
+.header .nav .logo img {
+  height: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 20px;
+}
+.header .nav .logo p {
+  font-size: 27px;
+  font-family: "mullermedium";
+  line-height: 27px;
+  display: inline-block;
+  color: #404040;
+  vertical-align: middle;
+}
+.header .nav .menu {
+  height: 80px;
+  line-height: 80px;
+  width: 60%;
+  float: right;
+}
+.header .nav .menu__items {
+  float: right;
+}
+.header .nav .menu__item {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  margin-right: 35px;
+}
+.header .nav .menu__link {
+  text-decoration: none;
+  padding: 5px 0;
+  font-family: "mullerregular";
+  text-shadow: 2px 0px 11px rgba(0, 0, 0, 0.2);
+}
+.header .nav .menu__home {
+  color: #404040;
+}
+.header .nav .menu__home:hover {
+  border-bottom: 1px solid #333333;
+}
+.header .nav .menu__portfolio {
+  color: #23c869;
+}
+.header .nav .menu__portfolio:hover {
+  border-bottom: 1px solid #1fb25e;
+}
+.header .nav .menu__about-me {
+  color: #23afc8;
+}
+.header .nav .menu__about-me:hover {
+  border-bottom: 1px solid #1f9cb2;
+}
+.header .nav .menu__contacts {
+  color: #feb62b;
+}
+.header .nav .menu__contacts:hover {
+  border-bottom: 1px solid #fead12;
+}
+.header .nav .menu__telegram img {
+  width: 35px;
+}
+.header-inner {
+  min-height: 646px;
+  position: relative;
+}
+.header-inner h1 {
+  position: relative;
+  top: 190px;
+  font-family: "mullerextrabold";
+  color: #141414;
+  font-size: 60px;
+  text-transform: uppercase;
+  left: 80px;
+}
+.header-inner .header__link {
+  width: 260px;
+  height: 60px;
+  background-color: #141414;
+  border: none;
+  text-align: center;
+  font-family: "mullerregular";
+  color: #fff;
+  position: relative;
+  display: block;
+  line-height: 54px;
+  font-size: 26px;
+  transition: 0.5s;
+  border: 3px solid #141414;
+  left: 130px;
+  top: 260px;
+  font-family: "mullerregular";
+}
+.header-inner .header__link:hover {
+  background-color: transparent;
+  transition: 0.5s;
+  color: #141414;
+}
+.header-inner img {
+  float: right;
+  position: relative;
+  top: -100px;
+}
+
+/*************************************************************/
+.portfolio {
+  clear: both;
+  width: 100%;
+  position: relative;
+}
+.portfolio h2 {
+  font-size: 52px;
+  text-align: center;
+  font-family: "mullerbold";
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  font-family: "mullerbold";
+}
+.portfolio__items {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+.portfolio__link {
+  font-size: 20px;
+  font-family: "mullerlight";
+  padding: 3px 0;
+  border-bottom: 1px solid transparent;
+}
+.portfolio__link:hover {
+  border-color: #141414;
+  transition: 0.3s;
+}
+.portfolio__link a {
+  color: #7f7f7f;
+}
+.portfolio__link a:hover {
+  color: #141414;
+  transition: 0.3s;
+}
+.portfolio .works {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.portfolio .works .work {
+  flex-basis: 25%;
+  background-color: #ccc;
 }
