@@ -250,7 +250,7 @@ textarea:focus, input:focus {
 .portfolio .works .work {
   flex-basis: 25%;
   position: relative;
-  min-height: 20px;
+  min-height: 150px;
   background-color: #ccc;
 }
 .portfolio .works .work:hover .work_hover {
@@ -413,7 +413,26 @@ textarea:focus, input:focus {
   transition: 0.5s;
   border: 2px solid #141414;
   padding-left: 10px;
-  margin-bottom: 27px;
+  margin-bottom: 14px;
+}
+.contacts__label-i {
+  color: #404040;
+  font-family: "mullerregular";
+  font-size: 14px;
+  position: relative;
+  left: 12px;
+  transition: 0.3s;
+  top: -45px;
+}
+.contacts__label-t {
+  color: #404040;
+  font-family: "mullerregular";
+  font-size: 14px;
+  position: relative;
+  left: 53px;
+  transition: 0.3s;
+  top: -183px;
+  display: block;
 }
 .contacts #contacts__message {
   width: 400px;

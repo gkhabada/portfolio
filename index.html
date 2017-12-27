@@ -136,12 +136,15 @@
 			<div class="contacts__form">
 				<form action="">
 					<div class="dib">
-						<input type="name" id="contacts__name" name="name" placeholder="Ваше имя">
-						<input type="email" id="contacts__email" name="email" placeholder="Ваш email">
-						<input type="text" id="contacts__telegram" name="telegram" placeholder="Ваш telegram">
+						<input type="name" id="contacts__name" class="contacts_animation" name="name" >
+						<label class="contacts__label-i" for="contacts__name">Ваше имя</label>
+						<input type="email" id="contacts__email" class="contacts_animation" name="email" >
+						<label class="contacts__label-i" for="contacts__email">Ваш email</label>
+						<input type="text" id="contacts__telegram" class="contacts_animation" name="telegram">
+						<label class="contacts__label-i" for="contacts__telegram">Ваш telegram</label>
 					</div>
 					<div class="dib">
-						<textarea name="message" id="contacts__message" placeholder="Введите сообщение..." ></textarea>
+						<textarea name="message" id="contacts__message" placeholder="Введите ваше сообщение..."></textarea>
 						<input type="submit" id="contacts__submit" value="Отправить">
 					</div>
 				</form>

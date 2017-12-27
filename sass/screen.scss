@@ -255,7 +255,7 @@ outline: none;
             .work {
                 flex-basis: 25%;
                 position: relative;
-                min-height: 20px;
+                min-height: 150px;
                 background-color: #ccc;
                 
                 &:hover .work_hover{
@@ -395,7 +395,26 @@ outline: none;
     }
     #contacts__name, #contacts__email, #contacts__telegram {
         @include for-input(260px, 50px);
-        margin-bottom: 27px;
+        margin-bottom: 14px;
+    }
+    &__label-i {
+        color: #404040;
+        font-family: $regular;
+        font-size: 14px;
+        position: relative;
+        left: 12px;
+        transition: 0.3s;
+        top: -45px;
+    }
+    &__label-t {
+        color: #404040;
+        font-family: $regular;
+        font-size: 14px;
+        position: relative;
+        left: 53px;
+        transition: 0.3s;
+        top: -183px;
+        display: block;
     }
     #contacts__message {
         @include for-input(400px, 205px);
