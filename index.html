@@ -11,7 +11,7 @@
     <div id="wrapper">
 		
 		<!--------------------- Шапка ------------------>
-		<header class="header section">
+		<header class="header section" id="header">
 			<nav class="nav">
 				<div class="logo">
 					<img src="img/logo.png" alt="логотип">
@@ -19,11 +19,11 @@
 				</div>
 				<div class="menu">
 					<ul class="menu__items">
-						<li class="menu__item"><a class="menu__link menu__home" href="#">Главная</a></li>
-						<li class="menu__item"><a class="menu__link menu__portfolio" href="#">Портфолио</a></li>
-						<li class="menu__item"><a class="menu__link menu__about-me" href="#">Обо мне</a></li>
-						<li class="menu__item"><a class="menu__link menu__contacts" href="#">Контакты</a></li>
-						<li class="menu__item"><a class="menu__link menu__telegram" href="https://t.me/gadzhidadaevgr"><img src="img/telegram.png" alt="telegram"></a></li>
+						<li class="menu__item"><a class="menu__link menu__home" href="#header">Главная</a></li>
+						<li class="menu__item"><a class="menu__link menu__portfolio" href="#portfolio">Портфолио</a></li>
+						<li class="menu__item"><a class="menu__link menu__about-me" href="#about-me">Обо мне</a></li>
+						<li class="menu__item"><a class="menu__link menu__contacts" href="#contacts">Контакты</a></li>
+						<li class="menu__item"><a class="menu__link menu__telegram" href="https://t.me/gadzhidadaevgr" target="_blank"><img src="img/telegram.png"  alt="telegram"></a></li>
 					</ul>
 				</div>
 			</nav>
@@ -36,10 +36,10 @@
 		
 		
 		<!--------------------- portfolio ------------------>
-		<div class="portfolio">
+		<div class="portfolio" id="portfolio">
 			<h2>Мои проекты</h2>
 			<ul class="portfolio__items section">
-				<li class="portfolio__link"><a href="#">Все</a></li>
+				<li class="portfolio__link"><a href="#">Все работы</a></li>
 				<li class="portfolio__link"><a href="#">Верстка</a></li>
 				<li class="portfolio__link"><a href="#">Front-end</a></li>
 				<li class="portfolio__link"><a href="#">web design</a></li>
@@ -116,38 +116,49 @@
 		
 		
 		<!--------------------- about-me ------------------>
-		<div class="about-me">
-			<h2>Обо мне</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, velit, odio nobis quos iusto voluptates est fugit optio consequuntur soluta vel quo voluptatem. Ipsam, inventore odit distinctio excepturi molestiae enim!</p>
-			<img src="img/my-photo" alt="моя фотография">
+		<div class="about-me" id="about-me">
+		<img src="img/my-white.jpg" alt="моя фотография">
+			<div class="section" >
+				<div class="about-me__info">
+					<h2>Обо мне</h2>
+					<p>Меня зовут Гаджи, 22 года. Женат, есть ребенок. Выпускник ДГИ daggum.com на красный диплом. <br><br>Программированием занимаюсь почти 2 года. За это время сверстал не мало макетов. Разбираюсь в web дизайне  <br><br>На данный момент являюсь верстальщиком, front-end junior.  <br><br>Основные мои знания: html, <br>css (scss), <br>javascript (jquery, React js), <br>Adobe Photoshop, <br>Github,</p>
+				</div>
+			</div>
 		</div>
 		
 		<!--------------------- contacts ------------------>
-		<div class="contacts section">
+		<div class="contacts section" id="contacts">
+			<h2>Контакты</h2>
 			<div class="contacts__form">
 				<form action="">
-					<input type="text">
-					<input type="text">
-					<input type="text">
-					<textarea name="" id="" cols="30" rows="10"></textarea>
-					<input type="text">
+					<div class="dib">
+						<input type="name" id="contacts__name" name="name" placeholder="Ваше имя">
+						<input type="email" id="contacts__email" name="email" placeholder="Ваш email">
+						<input type="text" id="contacts__telegram" name="telegram" placeholder="Ваш telegram">
+					</div>
+					<div class="dib">
+						<textarea name="message" id="contacts__message" placeholder="Введите сообщение..." ></textarea>
+						<input type="submit" id="contacts__submit" value="Отправить">
+					</div>
 				</form>
 			</div>
 			<div class="contacts__soc">
 				<ul>
-					<li class="soc__item"><a href="#"><img src="img/vk.png" alt=""></a></li>
-					<li class="soc__item"><a href="#"><img src="img/vk.png" alt=""></a></li>
-					<li class="soc__item item_inline"><a href="#"><img src="img/vk.png" alt=""></a></li>
-					<li class="soc__item item_inline"><a href="#"><img src="img/vk.png" alt=""></a></li>
-					<li class="soc__item item _inline"><a href="#"><img src="img/vk.png" alt=""></a></li>
+					<li class="soc__item dib"><a href="#"><img src="img/geo-b.png" alt=""></a><span class="dib ">Республика Дагестан г. Махачкала</span></li>
+					<li class="soc__item dib"><a href="#"><img src="img/inst-b.png" alt=""></a><span class="dib soc__span2">gkhabada</span></li>
+					<li class="soc__item dib"><a href="#"><img src="img/email-b.png" alt=""></a></li>
+					<li class="soc__item dib"><a href="#"><img src="img/git-b.png" alt=""></a></li>
+					<li class="soc__item dib"><a href="#"><img src="img/skype-b.png" alt=""></a></li>
 				</ul>
 			</div>
 		</div>
 		
 		
 		<!--------------------- footer ------------------>
-		<div class="footer section">
-			<h4>Gkhabada    CopyRight © 2017 by GadzhidadaevGR</h4>
+		<div class="footer">
+			<div class="footer-inner section">
+				<h4>Gkhabada    CopyRight © 2017 by GadzhidadaevGR</h4>
+			</div>
 		</div>
 		
     </div><!--#wrapper-->
