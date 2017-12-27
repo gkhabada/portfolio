@@ -2,7 +2,6 @@
 .sass-cache/
 webdis/
 fonts/
-img/
 
 config.rb
 sass/ie.scss
