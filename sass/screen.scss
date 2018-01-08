@@ -94,6 +94,17 @@ outline: none;
 .hidden{	opacity:0;	}
 .visible{	opacity:1;	}
 
+@keyframes rotage {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        filter: grayscale(100%);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 .scroll-top {
 	z-index: 1000;
@@ -280,7 +291,7 @@ outline: none;
         .logo {
             float: left;
             width: 30%;
-            position: relation;
+            position: relative;
             img {
                 height: 80px;
                 display: inline-block;
@@ -299,7 +310,7 @@ outline: none;
         .menu {
             height: 80px;
             line-height: 80px;
-            width: 60%;
+            width: 55%;
             float: right;
             
             &__items {
@@ -345,6 +356,16 @@ outline: none;
             }
             &__telegram img {
                 width: 35px;
+                top: 10px;
+                position: relative;
+                
+                &:hover {
+                    transition-duration: 4s;
+                    animation-name: rotage;
+                    animation-timing-function: ease-out;
+                    animation-delay: 0.1s;
+                    animation-duration: 1s;
+                }
             }
             
         }
@@ -363,6 +384,7 @@ outline: none;
             text-transform: uppercase;
             left: 80px;
             cursor: none;
+            width: 500px;
         }
         .header__link {
             @include link_white(260px, 60px, 3px, 26px, #fff, $color-black);
@@ -383,7 +405,7 @@ outline: none;
 
 
 
-/*************************************************************/
+/****************************   portfolio   *********************************/
 
 .portfolio {
     clear: both;
@@ -465,8 +487,8 @@ outline: none;
                     h3 {
                         font-size: 28px;
                         font-family: $medium;
-                        margin-top: 48px;
-                        margin-bottom: 40px;
+                        margin-top: 40px;
+                        margin-bottom: 30px;
                         
                     }
                     p {
@@ -512,16 +534,39 @@ outline: none;
     min-height: 695px;
     position: relative;
     
+    &:hover &__photo {
+        transition: 0.5s;
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        -ms-filter: grayscale(0%);
+        -o-filter: grayscale(0%);;
+        filter: none;
+        -webkit-filter: grayscale(0);    
+    }
+    
+    #device980 {
+        position: relative;
+    }
     &__photo {
-        background-image: url(../img/my-white.jpg);
-        background-position: cover;
+        background-image: url(../img/my.jpg);
+        background-position: center;
         background-repeat: no-repeat;
         background-size: 100% auto;
         height: 600px;
-        width: 54%;
+        width: 400px;
         position: absolute;
         right: 0;
-        top: 0;
+        top: 30px;
+        transition: 0.5s;
+        filter: grayscale(80%);
+        -webkit-filter: grayscale(80%);
+        -moz-filter: grayscale(80%);
+        -ms-filter: grayscale(80%);
+        -o-filter: grayscale(80%);
+        filter: url(desaturate.svg#greyscale);
+        filter: gray;
+        -webkit-filter: grayscale(0.8);
     }
     
     &__info {

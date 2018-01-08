@@ -92,6 +92,17 @@ textarea:focus, input:focus {
   opacity: 1;
 }
 
+@keyframes rotage {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    filter: grayscale(100%);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .scroll-top {
   z-index: 1000;
   position: fixed;
@@ -288,7 +299,7 @@ textarea:focus, input:focus {
 .header .nav .logo {
   float: left;
   width: 30%;
-  position: relation;
+  position: relative;
 }
 .header .nav .logo img {
   height: 80px;
@@ -307,7 +318,7 @@ textarea:focus, input:focus {
 .header .nav .menu {
   height: 80px;
   line-height: 80px;
-  width: 60%;
+  width: 55%;
   float: right;
 }
 .header .nav .menu__items {
@@ -351,6 +362,15 @@ textarea:focus, input:focus {
 }
 .header .nav .menu__telegram img {
   width: 35px;
+  top: 10px;
+  position: relative;
+}
+.header .nav .menu__telegram img:hover {
+  transition-duration: 4s;
+  animation-name: rotage;
+  animation-timing-function: ease-out;
+  animation-delay: 0.1s;
+  animation-duration: 1s;
 }
 .header-inner {
   min-height: 646px;
@@ -365,6 +385,7 @@ textarea:focus, input:focus {
   text-transform: uppercase;
   left: 80px;
   cursor: none;
+  width: 500px;
 }
 .header-inner .header__link {
   width: 260px;
@@ -395,7 +416,7 @@ textarea:focus, input:focus {
   top: -100px;
 }
 
-/*************************************************************/
+/****************************   portfolio   *********************************/
 .portfolio {
   clear: both;
   width: 100%;
@@ -475,8 +496,8 @@ textarea:focus, input:focus {
 .portfolio .works .work_hover h3 {
   font-size: 28px;
   font-family: "mullermedium";
-  margin-top: 48px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 .portfolio .works .work_hover p {
   font-size: 14px;
@@ -540,16 +561,38 @@ textarea:focus, input:focus {
   min-height: 695px;
   position: relative;
 }
+.about-me:hover .about-me__photo {
+  transition: 0.5s;
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+.about-me #device980 {
+  position: relative;
+}
 .about-me__photo {
-  background-image: url(../img/my-white.jpg);
-  background-position: cover;
+  background-image: url(../img/my.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;
   height: 600px;
-  width: 54%;
+  width: 400px;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 30px;
+  transition: 0.5s;
+  filter: grayscale(80%);
+  -webkit-filter: grayscale(80%);
+  -moz-filter: grayscale(80%);
+  -ms-filter: grayscale(80%);
+  -o-filter: grayscale(80%);
+  filter: url(desaturate.svg#greyscale);
+  filter: gray;
+  -webkit-filter: grayscale(0.8);
 }
 .about-me__info {
   width: 530px;
