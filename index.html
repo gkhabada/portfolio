@@ -2,27 +2,33 @@
 <html>
   <head>
     <meta charset=utf-8>
-    <title>Сайт Гаджидадаева Гаджи</title>
-	
-	<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-	<link href="css/fonts.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Сайт frontend разработчика Гаджидадаева Гаджи gkhabada, создание сайтов">
+    <meta name="keywords" content="Frontend,Web,programing,программирования,Создание сайтов,Махачкала,Хунзах,HTML,CSS,JavaScript,Vue,jquery">
+    <meta name="author" content="Гаджи Гаджидадаев">
+    <meta name="geo.placename" content="Хунзах, Россия" />
+    <meta name="geo.position" content="42.5409834;46.7006393" />
+    <meta name="geo.region" content="RU-Махачкала" />
+
+    <title>Сайт frontend разработчика Гаджидадаева Гаджи gkhabada</title>
+
+    <link rel="icon" href="img/logo.png" type="image/png">
+  	<link rel="stylesheet"
+  	href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  	<link href="css/fonts.css" rel="stylesheet">
     <link href="css/screen.css" rel="stylesheet">
-	<link href="css/media.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/viewport.js" type="text/javascript"></script>
+  	<link href="css/media.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="js/viewport.js" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
-	
-	
-	<script type="text/javascript">
-		
-	</script>
-   
+
   </head>
   <body>
     <div id="wrapper">
-		<div class="scroll-top">	<p>&uArr;</p></div>
-		<!--------------------- Шапка ------------------>
+		  <div class="scroll-top">	<p>&uArr;</p></div>
+
+		<!--      Шапка        -->
 		<header class="header section" id="header">
 			<nav class="nav">
 				<div class="logo">
@@ -35,12 +41,12 @@
 						<li class="menu__item"><a class="menu__link menu__portfolio" href="#portfolio">Портфолио</a></li>
 						<li class="menu__item"><a class="menu__link menu__about-me" href="#about-me">Обо мне</a></li>
 						<li class="menu__item"><a class="menu__link menu__contacts" href="#contacts">Контакты</a></li>
-						<li class="menu__item"><a class="menu__telegram" href="https://t.me/gadzhidadaevgr" target="_blank"><img src="img/telegram.png"  alt="telegram"></a></li>
+						<!-- <li class="menu__item"><a class="menu__telegram" href="https://t.me/gadzhidadaevgr" target="_blank"><img src="img/telegram.png"  alt="telegram"></a></li> -->
 					</ul>
 				</div>
 			</nav>
 			<div class="header-inner">
-				<h1>
+				<h2>
 					<span class="rubbb">f</span>
 					<span class="rubbb">r</span>
 					<span class="rubbb">o</span>
@@ -50,7 +56,7 @@
 					<span class="rubbb">e</span>
 					<span class="rubbb">n</span>
 					<span class="rubbb">d</span>
-					<br>         
+					<br>
 					<span class="front">d</span>
 					<span class="front">e</span>
 					<span class="front">v</span>
@@ -60,220 +66,367 @@
 					<span class="front">p</span>
 					<span class="front">e</span>
 					<span class="front">r</span>
-					
-				</h1>
+
+				</h2>
 				<a class="header__link"href="https://github.com/gadzhi7" target="_blank">github</a>
-				<img src="img/header.png" alt="developer">
+				<img src="img/header.png" alt="frontend">
 			</div>
 		</header>
-		
-		
-		<!--------------------- portfolio ------------------>
+
+		<!--- portfolio -->
 		<div class="portfolio" id="portfolio">
-			<h2>Мои проекты</h2>
-<!--
-			<ul class="portfolio__items section">
-				<li class="portfolio__link"><a href="#">Все работы</a></li>
-				<li class="portfolio__link"><a href="#">Верстка</a></li>
-				<li class="portfolio__link"><a href="#">Front-end</a></li>
-				<li class="portfolio__link"><a href="#">web design</a></li>
-			</ul>
--->
+			<h2>Мои работы</h2>
+
+      <div class="best-project">
+        <div class="best-project_inner">
+          <h4>Сайт фотографа Мухтара Гаджидадаева</h4>
+          <h5>SPA приложение на Vue.js</h5>
+          <a href="http://mukhtar.h1n.ru/" target="_blank">Перейти к проекту</a>
+        </div>
+        <div class="best-project_overlay"></div>
+      </div>
+
 			<div class="works">
+
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Bortnik</h3>
+            <p class="work__text">Адаптивная верстка для организации по внедрению своего продукта онлайн консультации.</p>
+            <a href="works/bortnik/index.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/bortnik.jpg" alt="онлайн консультация" title="онлайн консультация">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Приют</h3>
+            <p class="work__text">Сайт для приюта с модальными окнами.</p>
+            <a href="works/shelter/index.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/shelter.jpg" alt="приют" title="приют">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Ням-ням</h3>
+            <p class="work__text">Организация питания сотрдуников</p>
+            <a href="works/nyam/index.html"  target="_blank" class="work__link" >Открыть</a>
+          </div>
+          <img src="img/nyam.jpg" alt="ням-ням" title="ням-ням">
+        </div>
 				<div class="work">
-					
-					<img src="img/food.jpg" alt="" >
+					<img src="img/food.jpg" alt="сайт food" title="food">
 					<div class="work_hover">
 						<h3 class="work__title">Food</h3>
 						<p class="work__text">Рекламный landing page для игры. Верстка адаптивная. </p>
 						<a href="works/food/index.html"  class="work__link" target="_blank" >Открыть</a>
 					</div>
 				</div>
-				<div class="work">
-					<div class="work_hover">
-						<h3 class="work__title">Тестовая верстка</h3>
-						<p class="work__text">Вертсал сайт по psd шаблону</p>
-						<a href="works/test_dgi/index.php"  class="work__link" target="_blank" >Открыть</a>
-					</div>
-					<img src="img/test1.jpg" alt="" >
+        <div class="work">
+    					<div class="work_hover">
+    						<h3 class="work__title">Yandex taxi</h3>
+    						<p class="work__text">Страница про подключение к yandex taxi, верстка адаптивная.</p>
+    						<a href="works/yandex/index.html"  class="work__link" target="_blank" >Открыть</a>
+    					</div>
+    					<img src="img/yandex.jpg" alt="сайт яндекс такси" title="yandex">
 				</div>
-				<div class="work">
-					<div class="work_hover">
-						<h3 class="work__title">Lingvology</h3>
-						<p class="work__text">Рекламная страница большого проекта, адаптивная верстка.</p>
-						<a href="works/lingvology/index.html"  class="work__link" target="_blank" >Открыть</a>
-					</div>
-					<img src="img/lingvology.jpg" alt="" >
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Мой бизнес</h3>
+            <p class="work__text">Онлайн программное обеспечение для бизнеса в сфере услуг и торговли</p>
+            <a href="works/business/index.html"  target="_blank" class="work__link" >Открыть</a>
+          </div>
+          <img src="img/business.jpg" alt="Мой бизнес" title="business">
+        </div>
+        <div class="work">
+    					<div class="work_hover">
+    						<h3 class="work__title">Tontrek</h3>
+    						<p class="work__text">Сайт юридической консультанции.</p>
+    						<a href="works/tontrek/index.html"  class="work__link" target="_blank" >Открыть</a>
+    					</div>
+    					<img src="img/tontrek.jpg" alt="сайт tontrek" title="tontrek">
 				</div>
-				<div class="work">
-					<div class="work_hover">
-						<h3 class="work__title">Yandex taxi</h3>
-						<p class="work__text">Страница про подключение к yandex taxi, верстка адаптивная.</p>
-						<a href="works/yandex/index.html"  class="work__link" target="_blank" >Открыть</a>
-					</div>
-					<img src="img/yandex.jpg" alt="" >
+        <div class="work">
+    			  	<div class="work_hover">
+    						<h3 class="work__title">Kochaki</h3>
+    						<p class="work__text">Сайт закрытого частного клуба по организации мероприятий.</p>
+    						<a href="works/kochaki/celebration.html"  target="_blank" class="work__link" >Открыть</a>
+    					</div>
+    					<img src="img/kochaki_wedding.jpg" alt="сайт клуба" title="kochaki">
 				</div>
-				<div class="work">
-				<div class="work_hover">
-						<h3 class="work__title">Сеть магазинов </h3>
-						<p class="work__text">Страница с указанием графика адреса и информации 3 магазина.</p>
-						<a href="works/shop/shop.html"  class="work__link" target="_blank"  >Открыть</a>
-					</div>
-					<img src="img/shop.jpg" alt="" >
+        <div class="work">
+    	  			<div class="work_hover">
+    						<h3 class="work__title">Webway</h3>
+    						<p class="work__text">Страница открытого проекта. Адаптив.</p>
+    						<a href="works/webway/card.php"  target="_blank" class="work__link" >Открыть</a>
+    					</div>
+    					<img src="img/webway_card.jpg" alt="Webway" title="Webway">
 				</div>
-				<div class="work">
-					<div class="work_hover">
-						<h3 class="work__title">Portfolio</h3>
-						<p class="work__text">В свободное время баловался как бы свое портфолио.</p>
-						<a href="works/test_portfolio/index.php"  class="work__link" target="_blank" >Открыть</a>
-					</div>
-					<img src="img/portfolio.jpg" alt="" >
+        <div class="work">
+              <div class="work_hover">
+                <h3 class="work__title">Виджет</h3>
+                <p class="work__text">Продукт онлайн консультации</p>
+                <a href="works/widget/index.html"  target="_blank" class="work__link" >Открыть</a>
+              </div>
+              <img src="img/widget.jpg" alt="виджет" title="widget">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Уборка</h3>
+            <p class="work__text">Основная страница для компании по уборке помещений. Адаптив.</p>
+            <a href="works/uborka/index.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/uborka_index.jpg" alt="Уборка помещений" title="Уборка">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Согаз</h3>
+            <p class="work__text">Основная страница для страховой компании Согаз. Адаптив.</p>
+            <a href="works/sogaz/index.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/sogaz_index.jpg" alt="Согаз" title="Согаз">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Lingvology</h3>
+            <p class="work__text">Рекламная страница большого проекта, адаптивная верстка.</p>
+            <a href="works/lingvology/index.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/lingvology.jpg" alt="сайт lingvologyvo" title="lingvologyvo">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Сеть магазинов </h3>
+            <p class="work__text">Страница с указанием графика адреса и информации 3 магазина.</p>
+            <a href="works/shop/shop.html"  class="work__link" target="_blank">Открыть</a>
+          </div>
+          <img src="img/shop.jpg" alt="сайт магазин" title="shop">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Дельфин</h3>
+            <p class="work__text">Верстка сайта для рекламного агентства дельфин</p>
+            <a href="works/delfin/index.html"  target="_blank" class="work__link" >Открыть</a>
+          </div>
+          <img src="img/delfin.jpg" alt="сайт рекламного агентства" title="Дельфин">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Kochaki food</h3>
+            <p class="work__text">Сайт закрытого частного клуба по доставке еды под заказ</p>
+            <a href="works/kochaki/eat.html"  target="_blank" class="work__link" >Открыть</a>
+          </div>
+          <img src="img/kochaki_food.jpg" alt="сайт клуба" title="доставка еды">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Медсервис</h3>
+            <p class="work__text">Cверстал 7-8 страниц адаптивно для интернет магазина. По меню можно перейти на другие страницы</p>
+            <a href="works/med/index.html"  target="_blank" class="work__link" >Открыть</a>
+          </div>
+          <img src="img/medservice.jpg" alt="сайт медсервис" title="медсервис">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Уборка</h3>
+            <p class="work__text">Внутренняя страница для компании по уборке помещений. Адаптив.</p>
+            <a href="works/uborka/inner.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/uborka_inner.jpg" alt="Уборка помещений" title="Уборка помещений">
+        </div>
+        <div class="work">
+    	  			<div class="work_hover">
+    						<h3 class="work__title">Webway</h3>
+    						<p class="work__text">Страница ошбики 404. Адаптив.</p>
+    						<a href="works/webway/404.php"  target="_blank" class="work__link" >Открыть</a>
+    					</div>
+    					<img src="img/webway_404.jpg" alt="Webway" title="Webway">
 				</div>
-				<div class="work">
-					<div class="work_hover">
-						<h3 class="work__title">HTML письмо</h3>
-						<p class="work__text">Верстка письма предназначенная для рассылки по почте.</p>
-						<a href="works/html_letter/index.html"  class="work__link" target="_blank" >Открыть</a>
-					</div>
-					<img src="img/html.jpg" alt="" >
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Согаз</h3>
+            <p class="work__text">Внутренняя страница для страховой компании Согаз. Адаптив.</p>
+            <a href="works/sogaz/osopo.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/sogaz_osopo.jpg" alt="Согаз" title="Согаз">
+        </div>
+        <div class="work">
+    			  	<div class="work_hover">
+    						<h3 class="work__title">Kochaki домики</h3>
+    						<p class="work__text">Сайт закрытого частного клуба по аренде домиков и бань.</p>
+    						<a href="works/kochaki/index.html" target="_blank" class="work__link" >Открыть</a>
+    					</div>
+    					<img src="img/kochaki_house.jpg" alt="сайт клуба" title="kochaki">
 				</div>
-				<div class="work">
-				<div class="work_hover">
-						<h3 class="work__title">Bortnik</h3>
-						<p class="work__text">Адаптивная верстка для организации по внедрению своего продукта онлайн консультации.</p>
-						<a href="works/bortnik/index.html"  class="work__link" >Открыть</a>
-					</div>
-					<img src="img/bortnik.jpg" alt="" >
+        <div class="work">
+    					<div class="work_hover">
+    						<h3 class="work__title">HTML письмо</h3>
+    						<p class="work__text">Верстка письма предназначенная для рассылки по почте.</p>
+    						<a href="works/html_letter/index.html"  class="work__link" target="_blank" >Открыть</a>
+    					</div>
+    					<img src="img/html.jpg" alt="html letter" title="html letter">
 				</div>
-				
-				
-				<div class="work work_part2">
-				<div class="work_hover">
-						<h3 class="work__title">Дельфин</h3>
-						<p class="work__text">Верстка сайта для рекламного агентства дельфин</p>
-						<a href="works/delfin/index.php"  target="_blank" class="work__link" >Открыть</a>
-					</div>
-					<img src="img/delfin.jpg" alt="" >
+        <div class="work">
+      				<div class="work_hover">
+      						<h3 class="work__title">Чешский старовар</h3>
+      						<p class="work__text">Страница для интернет магазина "Чешский старовар</p>
+      						<a href="works/starovar/index.html"  target="_blank" class="work__link" >Открыть</a>
+      					</div>
+    					  <img src="img/starovar1.jpg" alt="сайт интернет магазина" title="Чешский старовар">
 				</div>
-				<div class="work work_part2">
-				<div class="work_hover">
-						<h3 class="work__title">Видеокурсы</h3>
-						<p class="work__text">Тестовый сайт чисто для дипломной работы.</p>
-						<a href="works/diplom/index.html"  target="_blank" class="work__link" >Открыть</a>
-					</div>
-					<img src="img/diplom.jpg" alt="" >
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Track</h3>
+            <p class="work__text">Адаптивная страница на bootstrap</p>
+            <a href="works/track/index.html"  target="_blank" class="work__link" >Открыть</a>
+          </div>
+          <img src="img/track.jpg" alt="сайт bootstrap" title="bootstrap">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Камень памяти</h3>
+            <p class="work__text">Интернет магазин по продаже надгробных камней</p>
+            <a href="works/memory/index.html"  target="_blank" class="work__link" >Открыть</a>
+          </div>
+          <img src="img/memory.jpg" alt="сайт камень памяти" title="камень памяти">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Видеокурсы</h3>
+            <p class="work__text">Тестовый сайт чисто для дипломной работы.</p>
+            <a href="works/diplom/index.html"  target="_blank" class="work__link" >Открыть</a>
+          </div>
+          <img src="img/diplom.jpg" alt="сайт дипломной работы" title="дипломная работа">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Тестовая</h3>
+            <p class="work__text">В свободное время верстал в свое удовольствие.</p>
+            <a href="works/second/index.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/second.jpg" alt="тестовая second" title="second">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">СВ технологии</h3>
+            <p class="work__text">Сайт для строительно компании</p>
+            <a href="works/technologies/index.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/technologies.jpg" alt="СВ технологии" title="СВ технологии">
+        </div>
+        <div class="work">
+    					<div class="work_hover">
+    						<h3 class="work__title">Тестовая верстка</h3>
+    						<p class="work__text">Вертсал сайт по psd шаблону</p>
+    						<a href="works/first/index.html"  class="work__link" target="_blank" >Открыть</a>
+    					</div>
+    					<img src="img/test1.jpg" alt="сайт test" title="верстка">
 				</div>
-				<div class="work work_part2">
-				<div class="work_hover">
-						<h3 class="work__title">Kochaki</h3>
-						<p class="work__text">Сайт закрытого частного клуба по доставке еды под заказ</p>
-						<a href="works/kochaki/eat.php"  target="_blank" class="work__link" >Открыть</a>
-					</div>
-					<img src="img/kochaki_food.jpg" alt="" >
-				</div>
-				<div class="work work_part2">
-				<div class="work_hover">
-						<h3 class="work__title">Медсервис</h3>
-						<p class="work__text">Cверстал 7-8 страниц адаптивно для интернет магазина. По меню можно перейти на другие страницы</p>
-						<a href="works/med/index.html"  target="_blank" class="work__link" >Открыть</a>
-					</div>
-					<img src="img/medservice.jpg" alt="" >
-				</div>
-				<div class="work work_part2">
-				<div class="work_hover">
-						<h3 class="work__title">Камень памяти</h3>
-						<p class="work__text">Интернет магазин по продаже надгробных камней</p>
-						<a href="works/memory/index.php"  target="_blank" class="work__link" >Открыть</a>
-					</div>
-					<img src="img/memory.jpg" alt="" >
-				</div>
-				<div class="work work_part2">
-				<div class="work_hover">
-						<h3 class="work__title">Виджет</h3>
-						<p class="work__text">Продукт онлайн консультации</p>
-						<a href="works/widget/index.html"  target="_blank" class="work__link" >Открыть</a>
-					</div>
-					<img src="img/widget.jpg" alt="" >
-				</div>
-				<div class="work work_part2">
-				<div class="work_hover">
-						<h3 class="work__title">Track</h3>
-						<p class="work__text">Простая тестовая адаптивная страница на bootstrap3</p>
-						<a href="works/track/index.html"  target="_blank" class="work__link" >Открыть</a>
-					</div>
-					<img src="img/track.jpg" alt="" >
-				</div>
-				<div class="work work_part2">
-				<div class="work_hover">
-						<h3 class="work__title">Чешский старовар</h3>
-						<p class="work__text">Страница для интернет магазина "Чешский старовар</p>
-						<a href="works/starovar/index.php"  target="_blank" class="work__link" >Открыть</a>
-					</div>
-					<img src="img/starovar1.jpg" alt="" >
-				</div>
-				
-				
-				
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Portfolio</h3>
+            <p class="work__text">В свободное время баловался как бы свое портфолио.</p>
+            <a href="works/portfolio/index.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/portfolio.jpg" alt="портфолио" title="portfolio">
+        </div>
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">Фотографии</h3>
+            <p class="work__text">Просто собрал некоторые фотографии брата фотографа</p>
+            <a href="works/photo/index.html"  class="work__link" target="_blank" >Открыть</a>
+          </div>
+          <img src="img/photo.jpg" alt="сборник фотографий" title="мухтар гаджидадаев">
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			</div>
 			<button class="portfolio__show-more">Показать ещё</button>
 		</div>
-		
-		
-		<!--------------------- about-me ------------------>
+
+		<!-- about-me -->
 		<div class="about-me" id="about-me">
-		
+
 			<div class="section" id="device980">
 				<div class="about-me__info">
 					<h2>Обо мне</h2>
-					<p>Меня зовут Гаджи, 22 года. Женат, есть лапочка дочка. Выпускник  <a href="http://www.daggum.ru/ru/" target="_blank">ДГИ</a>  на красный диплом. <br><br>Программированием занимаюсь более 2 года. За это время сверстал не мало макетов. Разбираюсь в web дизайне  <br><br>На данный момент являюсь верстальщиком, будущим front-end разработчиком.  <br><br>Основные мои навыки в программировании: <br> html5, css3 (scss, bootstrap3, pixel perfect); <br>javascript (jquery, React js); <br>Adobe Photoshop, Adobe Premier pro; <br>Github</p>
+          <h1>Front-end разработчик на <a href="https://vuejs.org/" target="_blank">Vue.js</a>. Работаю в студии по созданию сайтов.</h1>
+					<p>Меня зовут Гаджи, 23 года. Женат, есть лапочка дочка. Выпускник  <a href="http://www.daggum.ru/ru/" target="_blank">ДГИ</a>  на красный диплом. <br><br>Веб программированием занимаюсь с конца 2015 года. За это время сверстал не мало макетов. Разбираюсь в web дизайне  <br><br>На данный момент работаю на vue.js и разрабатываю SPA приложения.  <br><br>Основные мои навыки: <br> html5 (emmet); <br> css3 (scss, bootstrap3-4, pixel perfect); <br>javascript (jquery, vue.js); <br>Adobe Photoshop, Figma, Zeplin; <br>Github (приватный gitlab агентства)</p>
 				</div>
 				<div class="about-me__photo">
 			<!--<img src="img/my.jpg" alt="моя фотография">-->
 				</div>
 			</div>
-			
+
 		</div>
-		
-		<!--------------------- contacts ------------------>
+
+		<!-- contacts -->
 		<div class="contacts section" id="contacts">
 			<h2>Контакты</h2>
 			<div class="contacts__form">
-				<form action="">
+				<form action="" method="post">
 					<div class="dib">
-						<input type="name" id="contacts__name" class="contacts_animation" name="name" >
-						<label class="contacts__label-i" for="contacts__name">Ваше имя</label>
-						<input type="email" id="contacts__email" class="contacts_animation" name="email" >
-						<label class="contacts__label-i" for="contacts__email">Ваш email</label>
+						<input type="name" id="contacts__name" class="contacts_animation" name="name" minlength="3" required >
+						<label class="contacts__label-i" for="contacts__name">Ваше имя*</label>
+						<input type="email" id="contacts__email" class="contacts_animation" name="email" required >
+						<label class="contacts__label-i" for="contacts__email">Ваш email*</label>
 						<input type="text" id="contacts__telegram" class="contacts_animation" name="telegram">
 						<label class="contacts__label-i" for="contacts__telegram">Ваш telegram</label>
 					</div>
 					<div class="dib">
-						<textarea name="message" id="contacts__message" placeholder="Введите ваше сообщение..."></textarea>
+						<textarea name="message" id="contacts__message" placeholder="Введите ваше сообщение...*" minlength="10" required></textarea>
 						<input type="submit" id="contacts__submit" value="Отправить">
 					</div>
 				</form>
 			</div>
 			<div class="contacts__soc">
 				<ul>
-					<li class="soc__item dib"><a href="https://www.google.ru/maps/place/%D0%A5%D1%83%D0%BD%D0%B7%D0%B0%D1%85,+%D0%A0%D0%B5%D1%81%D0%BF.+%D0%94%D0%B0%D0%B3%D0%B5%D1%81%D1%82%D0%B0%D0%BD/@42.5493818,46.6952535,14z/data=!3m1!4b1!4m13!1m7!3m6!1s0x404d43d957c36b2f:0xa4f5323eaf6c112d!2z0JzQsNGF0LDRh9C60LDQu9CwLCDQoNC10YHQvy4g0JTQsNCz0LXRgdGC0LDQvQ!3b1!8m2!3d42.9666308!4d47.5126285!3m4!1s0x404f24b95fe2be47:0xcb995bbe591876c5!8m2!3d42.547769!4d46.7070007" target="_blank"><img src="img/geo-b.png" alt=""></a><span class="dib ">Республика Дагестан г. Махачкала</span></li>
-					<li class="soc__item dib"><a href="https://www.instagram.com/gkhabada/" target="_blank"><img src="img/inst-b.png" alt=""></a><span class="dib soc__span2">gkhabada</span></li>
-					<li class="soc__item dib"><a href="mailto:gadzhi7.7.7@mail.ru" target="_blank"><img src="img/email-b.png" alt=""></a></li>
-					<li class="soc__item dib"><a href="https://github.com/gadzhi7" target="_blank"><img src="img/git-b.png" alt=""></a></li>
-					<li class="soc__item dib"><a href="#" target="_blank"><img src="img/skype-b.png" alt=""></a></li>
+					<li class="soc__item dib"><a href="https://www.google.ru/maps/place/%D0%A5%D1%83%D0%BD%D0%B7%D0%B0%D1%85,+%D0%A0%D0%B5%D1%81%D0%BF.+%D0%94%D0%B0%D0%B3%D0%B5%D1%81%D1%82%D0%B0%D0%BD/@42.5493818,46.6952535,14z/data=!3m1!4b1!4m13!1m7!3m6!1s0x404d43d957c36b2f:0xa4f5323eaf6c112d!2z0JzQsNGF0LDRh9C60LDQu9CwLCDQoNC10YHQvy4g0JTQsNCz0LXRgdGC0LDQvQ!3b1!8m2!3d42.9666308!4d47.5126285!3m4!1s0x404f24b95fe2be47:0xcb995bbe591876c5!8m2!3d42.547769!4d46.7070007" target="_blank"><img src="img/geo-b.png" alt="geolocation"><span class="dib ">Республика Дагестан г. Махачкала</span></a></li>
+					<li class="soc__item dib"><a href="https://www.instagram.com/gkhabada/" target="_blank"><img src="img/inst-b.png" alt="instagram icon"><span class="dib soc__span2">gkhabada</span></a></li>
+					<li class="soc__item dib"> <a href="mailto:gadzhidadaev95@gmail.com" target="_blank"><img src="img/email-b.png" alt="email icon">  <span class="dib soc__span2">gadzhidadaev95@gmail.com</span> </a></li>
+					<!-- <li class="soc__item dib"><a href="https://github.com/gadzhi7" target="_blank"><img src="img/git-b.png" alt=""></a></li>
+					<li class="soc__item dib"><a href="#" target="_blank"><img src="img/skype-b.png" alt=""></a></li> -->
 				</ul>
 			</div>
 		</div>
-		
-		
-		<!--------------------- footer ------------------>
+
+		<!-- footer -->
 		<div class="footer">
 			<div class="footer-inner ">
-				<h4>Gkhabada    CopyRight © 2017 by GadzhidadaevGR</h4>
+				<h4>Gkhabada CopyRight © 2017-2019 by GadzhidadaevGR</h4>
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+           m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+           (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+           ym(52417000, "init", {
+                id:52417000,
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+           });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/52417000" style="position:absolute; left:-9999px;" alt="yandex" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 			</div>
 		</div>
-		
-		
-		
-    </div><!--#wrapper-->	
+
+
+
+    </div><!--#wrapper-->
   </body>
 </html>

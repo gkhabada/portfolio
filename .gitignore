@@ -1,4 +1,4 @@
-# кэш
+﻿# кэш
 .sass-cache/
 webdis/
 fonts/
@@ -7,6 +7,7 @@ works/
 
 formdata.php
 config.rb
+scss.txt
 
 
 sass/ie.scss
