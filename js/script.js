@@ -110,4 +110,12 @@ showWorkFunc();
 	        return false;
 	    });
 	});
+
+/* footer date */
+
+
+      let now = new Date();
+     	$(".footer_date").text(now.getFullYear());
+
+
 });
