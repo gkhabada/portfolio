@@ -696,6 +696,14 @@ textarea:focus, input:focus {
   line-height: 1.4;
   font-family: "mullerlight";
   color: #141414;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+}
+.about-me__info ul li span {
+  font-family: "mullermedium";
+}
+.about-me__info ul li:not(:last-child) {
+  border-bottom: 1px solid #dedede;
 }
 .about-me img {
   position: absolute;

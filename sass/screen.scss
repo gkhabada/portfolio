@@ -450,7 +450,6 @@ outline: none;
 	background-position: center -600px;
 	background-repeat: no-repeat;
 	background-size: cover;
-
 	&_inner {
 		font-family: $medium;
 		position: relative;
@@ -713,6 +712,14 @@ outline: none;
 						line-height: 1.4;
             font-family: $light;
             color: $color-black;
+						padding-bottom: 3px;
+						margin-bottom: 3px;
+						span {
+							font-family: $medium;
+						}
+						&:not(:last-child) {
+							border-bottom: 1px solid #dedede;
+						}
 					}
 				}
     }

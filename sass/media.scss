@@ -155,25 +155,34 @@ $black: 'mullerblack';
 
     .section {    width: 470px; }
 
+    .header .nav { min-height: 140px; }
+
     .header .nav .menu__item {
         font-size: 15px;
-        margin-right: 22px;
+        margin: 0 20px;
     }
-    .header .nav .menu__items {    margin: 0px auto;}
+
+    .header .nav .menu__items {
+        margin: 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
     .header .nav .menu {    margin-top: 20px;}
     .header-inner img {    display: none;}
     .header-inner h2 {
         left: 0;
         text-align: center;
         width: 100%;
-        top: 140px;
+        top: 50px;
     }
     .header-inner .header__link {
         left: 0;
-        top: 190px;
+        top: 85px;
         margin: 0 auto;
     }
-    .header-inner {    min-height: 440px;}
+    .header-inner {    min-height: 350px;}
 
     .portfolio .works .work {  flex-basis: 100%;}
     .portfolio .works .work_hover h3 {
@@ -209,10 +218,9 @@ $black: 'mullerblack';
 @media (max-width: 480px) {
 
     .section {    width: 100%; }
-
-    .header-inner {    min-height: 350px;  }
+    .header-inner {    min-height: 240px;  }
     .header .nav {    height: 280px;}
-    .header .nav .menu__item {    margin-right: 38px;}
+    .header .nav .menu__item {  margin: 0px 25px;}
     .header .nav .menu {
         height: 70px;
         line-height: 70px;
@@ -221,9 +229,9 @@ $black: 'mullerblack';
     }
     .header-inner h2 {
         font-size: 40px;
-        top: 30px;
+        top: 10px;
     }
-    .header-inner .header__link {   top: 100px;    }
+    .header-inner .header__link {   top: 40px;    }
 
     .portfolio .works .work_hover p {    display: none; }
     .portfolio .works .work_hover h3 {    margin-top: 25px;}
