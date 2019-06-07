@@ -1,13 +1,4 @@
-﻿# кэш
-.sass-cache/
-webdis/
-fonts/
-works/
+/node_modules
+/webdis
 
-
-formdata.php
-setting.txt
-
-
-sass/ie.scss
-css/ie.css
+/dist/works

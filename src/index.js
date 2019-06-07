@@ -1,4 +1,24 @@
+import './reset.scss';
+import './fonts.scss';
+import './screen.scss';
+import './media.scss';
+
+
+var $ = require("jquery");
+
 $(document).ready(function() {
+
+  // button scrollTop
+
+  $(document).scroll(function() {
+    let top = $("html, body").scrollTop();
+    if (top > 200) {
+      $('.scroll-top p').css('transform', 'rotate(180deg)');
+    } else {
+      $('.scroll-top p').css('transform', 'rotate(0deg)');
+    }
+  });
+
 
   // menu scroll
 
@@ -10,22 +30,6 @@ $(document).ready(function() {
     }, 800);
   });
 
-  // button scrollTop
-
-  $(document).scroll(function() {
-    var top = $("html, body").scrollTop();
-    if (top > 200) {
-      $('.scroll-top').fadeIn(500);
-    } else {
-      $('.scroll-top').fadeOut(500);
-    }
-  });
-
-  $('.scroll-top').click(function() {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 800);
-  });
 
   // animation lable on contacts block
 
@@ -46,7 +50,7 @@ $(document).ready(function() {
   $('.contacts_animation').focusout(function() {
     elemHeight = $(this).css('height');
     elemTop = parseInt(elemHeight) - 5;
-    v = $(this).val();
+    let v = $(this).val();
     if (v) {
       $(this).next().css({
         'color': '#404040'
@@ -65,14 +69,6 @@ $(document).ready(function() {
       'border-color': '#404040'
     });
   });
-
-  // animate show block
-
-  // $('.section').addClass("hidden").viewportChecker({
-  //   classToAdd: 'visible animated fadeIn',
-  //   offset: 100
-  // });
-
 
   let showWork = 0;
 
@@ -200,3 +196,22 @@ $(document).ready(function() {
   $(".about-me__old").text(Math.floor((now - wasBorn) / 31536000000));
 
 });
+
+
+  // button scrollTop
+
+  $('.scroll-top').click(scrollTo);
+
+  function scrollTo() {
+    console.log('check', $("html, body").scrollTop())
+    let scroll = $("html, body").scrollTop()
+    if(scroll >= 200) {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 800);
+    } else {
+      $('html, body').animate({
+        scrollTop: document.body.scrollHeight
+      }, 800);
+    }
+  }
