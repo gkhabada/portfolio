@@ -5,6 +5,7 @@
 
 $color-gray: #7f7f7f;
 $color-black: #141414;
+$color-white: #fefefe;
 $thin:  'mullerthin';
 $light: 'mullerlight';
 $regular: 'mullerregular';
@@ -14,26 +15,23 @@ $extrabold: 'mullerextrabold';
 $black: 'mullerblack';
 
 
-@mixin link_white ($width, $height, $border, $fsize, $color, $bgcolor) {
+@mixin link_white ($width, $height, $border, $fsize) {
     width: $width;
     height: $height;
-    background-color: $bgcolor;
     border: none;
     text-align: center;
     font-family: $regular;
-    color: $color;
     position: relative;
     display: block;
     line-height: $height - $border * 2;
     font-size: $fsize;
     transition: 0.5s;
-    border: $border solid $bgcolor;
+    border: $border solid;
 }
 
-@mixin link_white_active ($color-hover) {
+@mixin link_white_active () {
     background-color: transparent;
     transition: 0.5s;
-    color:  $color-hover;
 }
 
 @mixin h2 {
@@ -100,8 +98,7 @@ textarea:focus, input:focus{
     min-width: 320px;
     position: relative;
     z-index: 1;
-    background-color: #fff;
-    margin-bottom: 300px;
+    margin-bottom: 250px;
 }
 
 .section {
@@ -320,7 +317,6 @@ textarea:focus, input:focus{
     animation-duration: 0.7s;
     display: inline-block;
     margin-left: -8px;
-    color: #141414;
     animation-fill-mode: both;
 }
 .rubbb:hover {	animation-name: rubbb; color: #23c869!important;	}
@@ -363,10 +359,81 @@ textarea:focus, input:focus{
     transform-origin: center bottom;
     display: inline-block;
     margin-left: -8px;
-    color: #141414;
     animation-fill-mode: both;
 }
 .front:hover {	animation-name: rubbb; color: #23c869!important;	}
+
+// loader
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba($color-white, 0.5);
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s
+}
+
+$transition-duration: 2s;
+$path-length: 157px;
+
+svg {
+  overflow: visible;
+  width: 100px;
+  height: 150px;
+
+  g {
+    animation: slide $transition-duration linear infinite;
+
+    &:nth-child(2) {
+      animation-delay: $transition-duration / 4;
+
+      path {
+        animation-delay: $transition-duration / 4;
+        stroke-dasharray: 0px $path-length + 1;
+        stroke-dashoffset: 1px;
+      }
+    }
+  }
+
+  path{
+    stroke: url(#gradient);
+    stroke-width: 20px;
+    stroke-linecap: round;
+    fill: none;
+    stroke-dasharray: 0 $path-length;
+    stroke-dashoffset: 0;
+    animation: escalade $transition-duration cubic-bezier(0.8, 0, 0.2, 1) infinite;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes escalade {
+  0% {
+    stroke-dasharray: 0 $path-length;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: $path-length - 1 $path-length;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: $path-length - 1 $path-length;
+    stroke-dashoffset: -($path-length - 1);
+  }
+}
 
 /*   header   */
 
@@ -393,7 +460,6 @@ textarea:focus, input:focus{
                 font-family: $medium;
                 line-height: 27px;
                 display: inline-block;
-                color: #404040;
                 vertical-align: middle;
             }
         }
@@ -421,9 +487,9 @@ textarea:focus, input:focus{
             }
 
             &__home {
-                color: #404040;
+
                 &:hover {
-                    border-bottom: 1px solid darken(#404040, 5%);
+                    border-bottom: 1px solid darken(transparent, 5%);
                 }
             }
             &__portfolio {
@@ -469,6 +535,7 @@ textarea:focus, input:focus{
             top: 190px;
             font-family: $extrabold;
             color: $color-black;
+            // color: $color-white;
             font-size: 60px;
             text-transform: uppercase;
             left: 80px;
@@ -476,12 +543,12 @@ textarea:focus, input:focus{
             width: 500px;
         }
         .header__link {
-            @include link_white(260px, 60px, 3px, 26px, #fff, $color-black);
+            @include link_white(260px, 60px, 3px, 26px);
             left: 130px;
             top: 260px;
             font-family: $regular;
             &:hover {
-                @include link_white_active($color-black);
+                @include link_white_active();
             }
         }
         img {
@@ -513,17 +580,20 @@ textarea:focus, input:focus{
 		h4 {
 			text-align: center;
 			font-size: 26px;
-			color: #fff;
+			color: $color-white;
 		}
 		h5 {
-			color: #fff;
+			color: $color-white;
 			text-align: center;
 			font-family: $regular;
 			text-transform: uppercase;
 			margin-top: 30px;
 		}
 		a {
-			@include link_white(200px, 50px, 2px, 17px, #404040, #fff);
+			@include link_white(200px, 50px, 2px, 17px);
+      color: $color-black;
+      border-color: $color-white;
+      background-color: $color-white;
 			@include mauto;
 			transition: 0.3s;
 			margin-top: 70px;
@@ -571,36 +641,11 @@ textarea:focus, input:focus{
         font-family: $bold;
         margin-bottom: 40px;
     }
-    &__items {
-        display: -webkit-flex;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 50px;
-        margin-bottom: 35px;
-    }
-    &__link {
-        font-size: 20px;
-        font-family: $light;
-        padding: 3px 0;
-        border-bottom: 1px solid transparent;
-
-        &:hover {
-            border-color: $color-black;
-            transition: 0.3s;
-        }
-        a {
-            color: $color-gray;
-            &:hover {
-                color: $color-black;
-                transition: 0.3s;
-            }
-        }
-    }
 
     .works {
         display: -webkit-flex;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
 				padding-bottom: 60px;
 
@@ -616,7 +661,7 @@ textarea:focus, input:focus{
 				    background-color: #eee;
 				    margin: border-box;
 				    margin: 0.5%;
-				    border: 2px solid #eee;
+				    border: 2px solid $color-white;
 				    box-shadow: 0px 1px 20px rgba(0,0,0,0.2);
 				    border-radius: 10px;
 				    overflow: hidden;
@@ -648,7 +693,7 @@ textarea:focus, input:focus{
                 height: 100%;
                 width: 100%;
                 background-color: rgba( #000, 0.55);
-                color: #fff;
+                color: $color-white;
                 text-align: center;
                 padding: 10px;
                 transition: 0.5s;
@@ -669,7 +714,10 @@ textarea:focus, input:focus{
                     overflow: hidden;
                 }
                 .work__link {
-                    @include link_white(141px, 30px, 2px, 14px, #404040, #fff);
+                    @include link_white(141px, 30px, 2px, 14px);
+                    color: $color-black;
+                    border-color: $color-white;
+                    background-color: $color-white;
                     position: absolute;
                     bottom: 30px;
                     left: calc(50% - 70px);
@@ -677,20 +725,21 @@ textarea:focus, input:focus{
                     font-family: $medium;
                     &:hover {
                         font-family: $bold;
-                        @include link_white_active(#fff);
+                        color: $color-white;
+                        @include link_white_active();
                     }
                 }
             }
         }
     }
     &__show-more {
-        @include link_white(261px, 51px, 3px, 18px, #fff, $color-black);
+        @include link_white(261px, 51px, 3px, 18px);
         margin: 0px auto 50px;
         font-family: $medium;
 
         &:hover {
             font-family: $bold;
-            @include link_white_active($color-black);
+            @include link_white_active();
         }
     }
 }
@@ -740,7 +789,6 @@ textarea:focus, input:focus{
             font-size: 22px;
 						line-height: 26px;
             font-family: $light;
-            color: $color-black;
 						margin-bottom: 14px;
         }
 				a {
@@ -753,7 +801,6 @@ textarea:focus, input:focus{
 						font-size: 22px;
 						line-height: 1.4;
             font-family: $light;
-            color: $color-black;
 						padding-bottom: 3px;
 						margin-bottom: 3px;
 						span {
@@ -775,7 +822,7 @@ textarea:focus, input:focus{
 /* contacts */
 
 .contacts {
-    background-color: #404040;
+    background-color: $color-black;
     width: 100%;
     min-height: 100px;
     padding-top: 30px;
@@ -864,7 +911,7 @@ textarea:focus, input:focus{
           text-align: center;
           overflow: hidden;
           width: 0;
-          color: #fff;
+          color: $color-white;
           font-family: $light;
           font-size: 17px;
           margin-top: 20px;
@@ -888,7 +935,7 @@ textarea:focus, input:focus{
 
 /*  footer  */
 .footer {
-    background-color: #404040;
+    background-color: $color-black;
     position: relative;
     height: 90px;
 
@@ -897,7 +944,7 @@ textarea:focus, input:focus{
         line-height: 90px;
         font-size: 18px;
         margin-left: 86px;
-        color: #fff;
+        color: $color-white;
         font-family: $light;
         letter-spacing: 1.55px;
     }
@@ -910,29 +957,45 @@ textarea:focus, input:focus{
   width: 100%;
 }
 
-.white {
-	color: #141414;
-	background-color: #fff;
+.night-text {
+	color: $color-white;
+  border-color: $color-white!important;
+  transition: 0.3s;
 }
-.white_button {
-	border-color: #141414;
-	background-color: #141414;
-	color: #fff;
+.night-bg {
+	background-color: $color-black;
+  transition: 0.3s;
 }
-.white_button:hover {
-	background-color: #fff;
-	color: #141414;
+.night-button {
+	border-color: $color-white!important;
+	background-color: $color-white;
+	color: $color-black;
+  transition: 0.3s;
+  cursor: pointer;
 }
-.black {
-	color: #fff;
-	background-color: #141414;
+.night-button:hover {
+  background-color: transparent!important;
+	color: $color-white;
+  transition: 0.3s;
 }
-.black_button {
-	border-color: #fff;
-	background-color: #fff;
-	color: #141414;
+.day-text {
+	color: $color-black;
+  border-color: $color-black!important;
+  transition: 0.3s;
 }
-.black_button:hover {
-	background-color: #141414;
-	color: #fff;
+.day-bg {
+	background-color: $color-white;
+  transition: 0.3s;
+}
+.day-button {
+	border-color: $color-black;
+	background-color: $color-black;
+	color: $color-white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.day-button:hover {
+  background-color: transparent;
+	color: $color-black;
+  transition: 0.3s;
 }

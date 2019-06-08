@@ -4,10 +4,10 @@ import './screen.scss';
 import './media.scss';
 
 
+
 var $ = require("jquery");
 
 $(document).ready(function() {
-
   // button scrollTop
 
   $(document).scroll(function() {
@@ -202,7 +202,42 @@ $(document).ready(function() {
   let wasBorn = new Date(1995, 4, 7);
   $(".about-me__old").text(Math.floor((now - wasBorn) / 31536000000));
 
+
+
+  //loader
+  setTimeout(() => $('.loader').hide(100), 700)
+
 });
+
+
+
+
+$(document).ready(function() {
+  let dn = localStorage.getItem('dayNight');
+  dn = JSON.parse(dn)
+  if(dn) {
+    $('#toggle_checkbox').prop('checked', true);
+    dayNight(dn)
+  }
+})
+
+$('#toggle_checkbox').on('change', function() {
+  console.log(this.checked)
+  localStorage.setItem('dayNight', JSON.stringify(this.checked));
+  dayNight(this.checked)
+})
+
+function dayNight (t = false) {
+  if(t) {
+    $('.day-text').removeClass('day-text').addClass('night-text')
+    $('.day-bg').removeClass('day-bg').addClass('night-bg')
+    $('.day-button').removeClass('day_button').addClass('night-button')
+  } else {
+    $('.night-text').removeClass('night-text').addClass('day-text')
+    $('.night-bg').removeClass('night-bg').addClass('day-bg')
+    $('.night-button').removeClass('night-button').addClass('day_button')
+  }
+}
 
 
 
