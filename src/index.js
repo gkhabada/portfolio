@@ -205,7 +205,7 @@ $(document).ready(function() {
 
 
   //loader
-  setTimeout(() => $('.loader').hide(100), 700)
+  setTimeout(() => $('.loader').hide(100), 200)
 
 });
 
@@ -222,7 +222,6 @@ $(document).ready(function() {
 })
 
 $('#toggle_checkbox').on('change', function() {
-  console.log(this.checked)
   localStorage.setItem('dayNight', JSON.stringify(this.checked));
   dayNight(this.checked)
 })
@@ -238,7 +237,6 @@ function dayNight (t = false) {
     $('.night-button').removeClass('night-button').addClass('day_button')
   }
 }
-
 
 
 
