@@ -70,22 +70,29 @@ $(document).ready(function() {
     });
   });
 
-  let showWork = 0;
 
-  function showWorkFunc() {
-    for (var i = 0; i < 8; i++) {
-      $(work[showWork]).fadeIn(1000);
-      showWork++;
-    }
-    if ($(work).length <= showWork) {
-      $('.portfolio__show-more').hide(200);
-    }
-  };
 
-  let work = $(".works").children();
-  work.hide();
-  $('.portfolio__show-more').on("click", showWorkFunc);
-  showWorkFunc();
+
+  // let showWork = 0;
+  //
+  // function showWorkFunc() {
+  //   for (var i = 0; i < 8; i++) {
+  //     $(work[showWork]).fadeIn(1000);
+  //     showWork++;
+  //   }
+  //   if ($(work).length <= showWork) {
+  //     $('.portfolio__show-more').hide(200);
+  //   }
+  // };
+  //
+  // let work = $(".works").children();
+  // work.hide();
+  // $('.portfolio__show-more').on("click", showWorkFunc);
+  // showWorkFunc();
+
+
+
+
 
   // work block aspect ratio
 
@@ -198,12 +205,101 @@ $(document).ready(function() {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let allWorks = null
+
+   let promise = fetch('works.json')
+  .then(function(response) {
+    if(response.status === 200) {
+      return response.json();
+    } else {
+      return null
+    }
+   })
+   .then(function(json) {
+     if(json !== null) {
+       allWorks = json
+       addWorks(allWorks)
+     }
+    });
+
+let showedWorkdIndex = 0
+let worksDiv = document.querySelector('.works')
+function addWorks(works) {
+  if(works !== null && works.length >= showedWorkdIndex) {
+    for(let i = showedWorkdIndex; i < showedWorkdIndex + 8; i++) {
+      if(works[i] !== undefined) {
+        let work = `
+        <div class="work">
+          <div class="work_hover">
+            <h3 class="work__title">${works[i].title}</h3>
+            <p class="work__text">${works[i].text}</p>
+            <a href="${works[i].link}" class="work__link" target="_blank">Открыть</a>
+          </div>
+          <img src="${works[i].img}" alt="${works[i].title}" title="${works[i].title}">
+        </div>
+        `
+        worksDiv.insertAdjacentHTML('beforeend', work);
+      }
+    }
+    var w = $('.work').css('width');
+    var h = parseInt(w) / 100 * 56.25;
+    $('.work').css('height', h + 'px');
+    $(window).resize(function() {
+      var w = $('.work').css('width');
+      var h = parseInt(w) / 100 * 56.25;
+      $('.work').css('height', h + 'px');
+    });
+
+    showedWorkdIndex += 8
+
+    works.length <= showedWorkdIndex ? $('.portfolio__show-more').hide(100) : null
+  }
+}
+document.querySelector('.portfolio__show-more').addEventListener('click', () => {
+  addWorks(allWorks)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // button scrollTop
 
   $('.scroll-top').click(scrollTo);
 
   function scrollTo() {
-    console.log('check', $("html, body").scrollTop())
     let scroll = $("html, body").scrollTop()
     if(scroll >= 200) {
         $('html, body').animate({

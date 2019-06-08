@@ -1,0 +1,158 @@
+[
+  {
+    "title": "Игра на JavaScript",
+    "text": "Игра на время кликнуть как можно больше элементов",
+    "link": "game/index.html",
+    "img": ""
+  },
+  {
+    "title": "Приют",
+    "text": "Сайт для приюта с модальными окнами.",
+    "link": "works/shelter/index.html",
+    "img": "img/shelter.jpg"
+  },
+  {
+    "title": "Блог",
+    "text": "Блог на JavaScript и Firebase",
+    "link": "works/blog/index.html",
+    "img": ""
+  },
+  {
+    "title": "Ням-ням",
+    "text": "Организация питания сотрдуников",
+    "link": "works/nyam/index.html",
+    "img": "img/nyam.jpg"
+  },
+  {
+    "title": "Фильмы с tmdb",
+    "text": "Вывод фильмов по API с tmdb на Vue.js",
+    "link": "works/films/index.html",
+    "img": ""
+  },
+  {
+    "title": "Food",
+    "text": "Рекламный landing page для игры. Верстканая.",
+    "link": "works/food/index.html",
+    "img": "img/food.jpg"
+  },
+  {
+    "title": "Дело",
+    "text": "Дело резюме с информацией обо мне",
+    "link": "works/delo/index.html",
+    "img": ""
+  },
+  {
+    "title": "Yandex taxi",
+    "text": "Страница про подключение к yandex taxi, верстканая.",
+    "link": "works/yandex/index.html",
+    "img": "img/yandex.jpg"
+  },
+  {
+    "title": "Bortnik",
+    "text": "Верстка для организации по внедрению своего продукта онлайн консультации.",
+    "link": "works/bortnik/index.html",
+    "img": "img/bortnik.jpg"
+  },
+  {
+    "title": "Webway",
+    "text": "Страница открытого проекта.",
+    "link": "works/webway/card.php",
+    "img": "img/webway_card.jpg"
+  },
+  {
+    "title": "Криптовалюта",
+    "text": "Вывод ТОП 50 криптовалют по API на Vue.js, обновление цены по socketIO и сортировка по цене",
+    "link": "works/crypto/index.html",
+    "img": ""
+  },
+  {
+    "title": "Мой бизнес",
+    "text": "Онлайн программное обеспечение для бизнеса в сфере услуг и торговли",
+    "link": "works/business/index.html",
+    "img": "img/business.jpg"
+  },
+  {
+    "title": "Tontrek",
+    "text": "Сайт юридической консультанции.",
+    "link": "works/tontrek/index.html",
+    "img": "img/tontrek.jpg"
+  },
+  {
+    "title": "Стать профессионалом",
+    "text": "Ты хочешь стать профессионалом?",
+    "link": "works/umilabs/index.html",
+    "img": ""
+  },
+  {
+    "title": "Виджет",
+    "text": "Продукт онлайн консультации",
+    "link": "works/widget/index.html",
+    "img": "img/widget.jpg"
+  },
+  {
+    "title": "Уборка",
+    "text": "Основная страница для компании по уборке помещений.",
+    "link": "works/uborka/index.html",
+    "img": "img/uborka_index.jpg"
+  },
+  {
+    "title": "Уборка",
+    "text": "Внутренняя страница для компании по уборке помещений.",
+    "link": "works/uborka/inner.html",
+    "img": "img/uborka_inner.jpg"
+  },
+  {
+    "title": "HTML письмо",
+    "text": "Верстка письма предназначенная для рассылки по почте.",
+    "link": "works/html_letter/index.html",
+    "img": "img/html.jpg"
+  },
+  {
+    "title": "Камень памяти",
+    "text": "Интернет магазин по продаже надгробных камней",
+    "link": "???works/memory/index.html",
+    "img": "img/memory.jpg"
+  },
+  {
+    "title": "Webway",
+    "text": "Страница ошбики 404.",
+    "link": "works/webway/404.php",
+    "img": "img/webway_404.jpg"
+  },
+  {
+    "title": "Согаз",
+    "text": "Основная страница для страховой компании Согаз.",
+    "link": "works/sogaz/index.html",
+    "img": "img/sogaz_index.jpg"
+  },
+  {
+    "title": "Согаз",
+    "text": "Внутренняя страница для страховой компании Согаз..",
+    "link": "works/sogaz/osopo.html",
+    "img": "img/sogaz_osopo.jpg"
+  },
+  {
+    "title": "Сеть магазинов",
+    "text": "Страница с указанием графика адреса и информации 3 магазина.",
+    "link": "works/shop/shop.html",
+    "img": "img/shop.jpg"
+  },
+  {
+    "title": "Медсервис",
+    "text": "Cверстал 7-8 страницно для интернет магазина. По меню можно перейти на другие страницы",
+    "link": "works/med/index.html",
+    "img": "img/medservice.jpg"
+  },
+  {
+    "title": "Медсервис",
+    "text": "Страница с информацией медицинского оборудования",
+    "link": "works/med/install.html",
+    "img": ""
+  },
+  {
+    "title": "Lingvology",
+    "text": "Рекламная страница большого проекта,ная верстка.",
+    "link": "works/lingvology/index.html",
+    "img": "img/lingvology.jpg"
+  }
+]

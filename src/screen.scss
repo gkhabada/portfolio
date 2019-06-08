@@ -98,6 +98,10 @@ textarea:focus, input:focus{
 
 #wrapper {
     min-width: 320px;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    margin-bottom: 300px;
 }
 
 .section {
@@ -128,7 +132,7 @@ textarea:focus, input:focus{
 
 .scroll-top {
   transform: rotate(180deg);
-	z-index: 1000;
+	z-index: 5;
 	position: fixed;
 	width: 62px;
 	// opacity: 0.5;
@@ -145,6 +149,10 @@ textarea:focus, input:focus{
 	text-align: center;
 	right: 25px;
 	bottom: 30px;
+
+  p {
+    transition: 0.3s;
+  }
 }
 .scroll-top:hover {
 	// opacity: 1;
@@ -157,7 +165,6 @@ textarea:focus, input:focus{
 #toggle_checkbox {
     display: none;
 }
-
 .toggle_checkbox__label {
     display: block;
     width: 62px;
@@ -171,7 +178,7 @@ textarea:focus, input:focus{
     cursor: pointer;
     transition: 0.3s ease background-color;
     overflow: hidden;
-    z-index: 4;
+    z-index: 5;
     position: fixed;
     bottom: 80px;
     right: 25px;
@@ -179,7 +186,6 @@ textarea:focus, input:focus{
     -khtml-user-select: none;
     user-select: none;
 }
-
 #star {
     position: absolute;
     top: 6.5px;
@@ -192,16 +198,13 @@ textarea:focus, input:focus{
     transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
     z-index: 1;
 }
-
 #star-1 {
     position: relative;
 }
-
 #star-2 {
     position: absolute;
     transform: rotateZ(36deg);
 }
-
 .star {
     top: 0;
     left: -4px;
@@ -210,7 +213,6 @@ textarea:focus, input:focus{
     color: #fff;
     transition: 0.3s ease color;
 }
-
 #moon {
     position: absolute;
     bottom: -28px;
@@ -221,7 +223,6 @@ textarea:focus, input:focus{
     border-radius: 50%;
     transition: 0.3s ease bottom;
 }
-
 #moon:before {
     content: "";
     position: absolute;
@@ -233,30 +234,24 @@ textarea:focus, input:focus{
     border-radius: 50%;
     transition: 0.3s ease background-color;
 }
-
 #toggle_checkbox:checked + label {
     background-color: #000;
 }
-
 #toggle_checkbox:checked + label #star {
     top: 1.5px;
     left: 32px;
     transform: scale(0.3);
     background-color: yellow;
 }
-
 #toggle_checkbox:checked + label .star {
     color: yellow;
 }
-
 #toggle_checkbox:checked + label #moon {
     bottom: 5px;
 }
-
 #toggle_checkbox:checked + label #moon:before {
     background-color: #000;
 }
-
 /* animation */
 
 @-webkit-keyframes rubbb {
@@ -648,7 +643,7 @@ textarea:focus, input:focus{
             &_hover {
                 opacity: 0;
                 position: absolute;
-                z-index: 10;
+                z-index: 4;
                 top: 0;
                 height: 100%;
                 width: 100%;
@@ -706,16 +701,6 @@ textarea:focus, input:focus{
     min-height: 695px;
     position: relative;
 
-    &:hover &__photo {
-        transition: 0.5s;
-        filter: grayscale(0%);
-        -webkit-filter: grayscale(0%);
-        -moz-filter: grayscale(0%);
-        -ms-filter: grayscale(0%);
-        -o-filter: grayscale(0%);;
-        filter: none;
-        -webkit-filter: grayscale(0);
-    }
 
     #device980 {
         position: relative;
@@ -726,14 +711,6 @@ textarea:focus, input:focus{
 			position: absolute;
 			right: 0;
 			top: 60px;
-			transition: 0.5s;
-			filter: grayscale(80%);
-			-webkit-filter: grayscale(80%);
-			-moz-filter: grayscale(80%);
-			-ms-filter: grayscale(80%);
-			-o-filter: grayscale(80%);
-			filter: gray;
-			-webkit-filter: grayscale(0.8);
 
 			img {
 				width: 100%;
@@ -798,11 +775,15 @@ textarea:focus, input:focus{
 /* contacts */
 
 .contacts {
-    min-height: 542px;
+    background-color: #404040;
+    width: 100%;
+    min-height: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     position: relative;
 
     &__form {
-        width: 710px;
+        // width: 710px;
         display: inline-block;
         vertical-align: top;
     }
@@ -870,39 +851,36 @@ textarea:focus, input:focus{
         }
     }
 
-    &__soc {
-        width: 300px;
-        vertical-align: top;
-        display: inline-block;
+    &__soc ul{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
 
         span {
-            width: 180px;
-            color: $color-black;
-            margin-top: 7px;
-            font-family: $light;
-            font-size: 17px;
-            line-height: 1.25;
-            position: relative;
-            left: 30px;
-
+          position: absolute;
+          left: 0;
+          text-align: center;
+          overflow: hidden;
+          width: 0;
+          color: #fff;
+          font-family: $light;
+          font-size: 17px;
+          margin-top: 20px;
+          transition: 0.2s;
         }
-        // .soc__span2 {
-        //     width: 150px;
-        //     left: 15px;
-        //     font-size: 18px;
-        //     margin-top: 14px;
-        // }
+
         .soc__item {
-            margin-bottom: 27px;
-            position: relative;
-            margin-right: 48px;
+            margin: 25px;
 
 						img {
 							width: 50px;
 						}
 
-            &:last-child {
-                margin-right: 0;
+            &:hover span {
+              width: 100%;
+              transition: 0.2s;
             }
         }
     }
@@ -915,13 +893,21 @@ textarea:focus, input:focus{
     height: 90px;
 
     h4{
+        text-align: center;
         line-height: 90px;
         font-size: 18px;
         margin-left: 86px;
         color: #fff;
         font-family: $light;
-        letter-spacing: 1.35;
+        letter-spacing: 1.55px;
     }
+}
+
+.fixed {
+  position: fixed;
+  z-index: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .white {
