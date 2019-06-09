@@ -436,9 +436,9 @@ svg {
 }
 
 /*   header   */
-
 .header {
     position: relative;
+    overflow: hidden;
 
     .nav {
         height: 140px;
@@ -560,7 +560,6 @@ svg {
 }
 
 // best project
-
 .best-project {
 	margin-bottom: 5px;
   width: 100%;
@@ -630,8 +629,8 @@ svg {
 }
 
 /*  portfolio  */
-
 .portfolio {
+    overflow: hidden;
     clear: both;
     width: 100%;
     position: relative;
@@ -745,38 +744,45 @@ svg {
 }
 
 /* about me */
-
 .about-me {
-    min-height: 695px;
+    // min-height: 655px;
     position: relative;
+    overflow: hidden;
+    z-index: -1;
+    padding: 20px 0;
 
 
     #device980 {
         position: relative;
     }
     &__photo {
-			height: 600px;
-			width: 400px;
-			position: absolute;
-			right: 0;
-			top: 60px;
+			height: 100%;
+			width: 100%;
+			position: fixed;
+      z-index: 0;
+			top: 0px;
+
 
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-		    border-radius: 5px;
+        object-position: top;
+        transition: 0.3s;
+        filter: brightness(25%);
 			}
     }
 
     &__info {
-        width: 530px;
+        z-index: 1;
+        width: 100%;
         padding: 15px;
         position: relative;
+        color: $color-white;
 
 				h1 {
 					margin-bottom: 20px;
-					font-size: 20px;
+					font-size: 24px;
 					font-family: $medium;
 				}
 
@@ -822,7 +828,7 @@ svg {
 // experience
 .experience {
   position: relative;
-  margin-top: 30px;
+  padding-top: 30px;
   padding-bottom: 30px;
 
 
@@ -894,7 +900,6 @@ svg {
 }
 
 /* contacts */
-
 .contacts {
     background-color: $color-black;
     width: 100%;
