@@ -107,17 +107,18 @@ $('#toggle_checkbox').on('change', function() {
 let aboutMeImg = document.querySelector('.about-me__photo img')
 
 function dayNight (t = false) {
-  let now = new Date().toLocaleTimeString().substring(0, 2)
+  let now = Number(new Date().toLocaleTimeString().substring(0, 2))
   if(t) {
     $('.day-text').removeClass('day-text').addClass('night-text')
     $('.day-bg').removeClass('day-bg').addClass('night-bg')
     $('.day-button').removeClass('day_button').addClass('night-button')
-    if(now > 23 || now < 6) aboutMeImg.setAttribute('src', 'img/about_me_night.jpg')
+    console.log(now >= 23, now, 23)
+    if(now >= 23 || now <= 6) aboutMeImg.setAttribute('src', 'img/about_me_night.jpg')
   } else {
     $('.night-text').removeClass('night-text').addClass('day-text')
     $('.night-bg').removeClass('night-bg').addClass('day-bg')
     $('.night-button').removeClass('night-button').addClass('day_button')
-    if(now > 23 || now < 6) aboutMeImg.setAttribute('src', 'img/about_me.jpg')
+    if(now >= 23 || now <= 6) aboutMeImg.setAttribute('src', 'img/about_me.jpg')
   }
 }
 

@@ -3,7 +3,7 @@
     "title": "Игра на JavaScript",
     "text": "Игра на время кликнуть как можно больше элементов",
     "link": "game/index.html",
-    "img": ""
+    "img": "img/game.jpg"
   },
   {
     "title": "Приют",
@@ -15,7 +15,7 @@
     "title": "Блог",
     "text": "Блог на JavaScript и Firebase",
     "link": "works/blog/index.html",
-    "img": ""
+    "img": "img/blog.jpg"
   },
   {
     "title": "Ням-ням",
@@ -27,7 +27,7 @@
     "title": "Фильмы с tmdb",
     "text": "Вывод фильмов по API с tmdb на Vue.js",
     "link": "works/films/index.html",
-    "img": ""
+    "img": "img/films.jpg"
   },
   {
     "title": "Food",
@@ -39,7 +39,7 @@
     "title": "Дело",
     "text": "Дело резюме с информацией обо мне",
     "link": "works/delo/index.html",
-    "img": ""
+    "img": "img/delo.jpg"
   },
   {
     "title": "Yandex taxi",
@@ -63,7 +63,7 @@
     "title": "Криптовалюта",
     "text": "Вывод ТОП 50 криптовалют по API на Vue.js, обновление цены по socketIO и сортировка по цене",
     "link": "works/crypto/index.html",
-    "img": ""
+    "img": "img/crypto.jpg"
   },
   {
     "title": "Мой бизнес",
@@ -81,7 +81,7 @@
     "title": "Стать профессионалом",
     "text": "Ты хочешь стать профессионалом?",
     "link": "works/umilabs/index.html",
-    "img": ""
+    "img": "img/prof.jpg"
   },
   {
     "title": "Виджет",
@@ -147,7 +147,7 @@
     "title": "Медсервис",
     "text": "Страница с информацией медицинского оборудования",
     "link": "works/med/install.html",
-    "img": ""
+    "img": "img/med.jpg"
   },
   {
     "title": "Lingvology",
