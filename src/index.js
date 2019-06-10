@@ -81,11 +81,16 @@ $(document).ready(function() {
 $(document).ready(function() {
   let imgBlock = document.querySelector('.about-me')
   let imgMy = document.querySelector('.about-me__photo')
+  function photoParallax() {
+    imgBlock.offsetTop + imgBlock.getBoundingClientRect().bottom <= 0 ? imgMy.style.position = 'absolute' : imgMy.style.position = 'fixed'
+  }
 
   window.onscroll = () => {
-    imgBlock.offsetTop + imgBlock.getBoundingClientRect().top <= 0 ? imgMy.style.position = 'absolute' : imgMy.style.position = 'fixed'
+    photoParallax()
   }
 })
+
+
 
 
 // day/night mode
