@@ -11,12 +11,12 @@ module.exports = {
   context: __dirname + '/src',
 
   entry: {
-    app: './'
+    app: './index.js',
+    media: './media.js'
   },
   output: {
     path: __dirname + '/dist',
-    // publicPath: __dirname + '/dist/',
-    filename: 'bundle.js'
+    filename: 'bundle.[name].js'
   },
 
   mode: 'production',
@@ -40,7 +40,7 @@ module.exports = {
         ]
       }
     }),
-    new ExtractTextPlugin("style.css"),
+    new ExtractTextPlugin("css/[name].css"),
     new HTMLPlugin({
       filename: 'index.html',
       template: __dirname + '/src/index.html'

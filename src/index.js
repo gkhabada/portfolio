@@ -1,7 +1,6 @@
-import './reset.scss';
-import './fonts.scss';
-import './screen.scss';
-import './media.scss';
+import './sass/reset.scss';
+import './sass/fonts.scss';
+import './sass/screen.scss';
 
 
 var $ = require("jquery");

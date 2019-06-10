@@ -565,10 +565,14 @@ svg {
   width: 100%;
   min-height: 320px;
   position: relative;
-  background-image: url('./img/best.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
 	&_inner {
 		font-family: $medium;
 		position: relative;
@@ -576,6 +580,8 @@ svg {
 		margin: 0 auto;
 		padding-top: 40px;
 		z-index: 2;
+
+
 		h4 {
 			text-align: center;
 			font-size: 26px;
@@ -607,13 +613,7 @@ svg {
 		}
 	}
 
-	&:hover &_overlay {
-		opacity: 1;
-		transition: 0.5s;
-	}
-
   &_overlay {
-		opacity: 0.7;
 		transition: 0.5s;
     width: 100%;
     height: 100%;
@@ -621,10 +621,6 @@ svg {
     top: 0;
     left: 0;
 		z-index: 1;
-		background: -moz-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 100%);
-		background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.35) 100%);
-		background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.35) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#33000000',GradientType=0 );
 	}
 }
 
