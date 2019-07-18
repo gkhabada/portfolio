@@ -2,7 +2,7 @@
   {
     "title": "Игра на JavaScript",
     "text": "Игра на время кликнуть как можно больше элементов",
-    "link": "http://gkhabada.h1n.ru/game/index.html",
+    "link": "works/game/index.html",
     "img": "img/game.jpg"
   },
   {
@@ -26,7 +26,7 @@
   {
     "title": "Фильмы с tmdb",
     "text": "Вывод фильмов по API с tmdb на Vue.js",
-    "link": "works/films/index.html",
+    "link": "http://films.gkhabada.h1n.ru/",
     "img": "img/films.jpg"
   },
   {
@@ -34,6 +34,12 @@
     "text": "Рекламный landing page для игры. Верстканая.",
     "link": "works/food/index.html",
     "img": "img/food.jpg"
+  },
+  {
+    "title": "Тесты на JavaScript",
+    "text": "Тесты с новостными вопросами на чистом js",
+    "link": "works/tests/index.html",
+    "img": "img/tests.jpg"
   },
   {
     "title": "Дело",
@@ -62,7 +68,7 @@
   {
     "title": "Криптовалюта",
     "text": "Вывод ТОП 50 криптовалют по API на Vue.js, обновление цены по socketIO и сортировка по цене",
-    "link": "works/crypto/index.html",
+    "link": "http://crypto.gkhabada.h1n.ru/",
     "img": "img/crypto.jpg"
   },
   {
