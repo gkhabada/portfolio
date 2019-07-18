@@ -1,7 +1,7 @@
 {
-  "name": "csssr",
+  "name": "gkhabada",
   "version": "1.0.0",
-  "description": "",
+  "description": "portfolio of frontend developer Gadzhidadaev Gadzhi",
   "main": "index.js",
   "devDependencies": {
     "@babel/core": "^7.4.3",
