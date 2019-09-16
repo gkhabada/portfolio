@@ -36,6 +36,12 @@
     "img": "img/food.jpg"
   },
   {
+    "title": "Фильтр квартир на JavaScript",
+    "text": "Фильт квартир по разных характеристикам на чисто js для интеграции в тильда",
+    "link": "works/filter/index.html",
+    "img": "img/filter.png"
+  },
+  {
     "title": "Тесты на JavaScript",
     "text": "Тесты с новостными вопросами на чистом js",
     "link": "works/tests/index.html",
