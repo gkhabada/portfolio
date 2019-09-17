@@ -26,7 +26,7 @@
   {
     "title": "Фильмы с tmdb",
     "text": "Вывод фильмов по API с tmdb на Vue.js",
-    "link": "http://films.gkhabada.h1n.ru/",
+    "link": "http://films.gkhabada.ru/",
     "img": "img/films.jpg"
   },
   {
@@ -74,7 +74,7 @@
   {
     "title": "Криптовалюта",
     "text": "Вывод ТОП 50 криптовалют по API на Vue.js, обновление цены по socketIO и сортировка по цене",
-    "link": "http://crypto.gkhabada.h1n.ru/",
+    "link": "http://crypto.gkhabada.ru/",
     "img": "img/crypto.jpg"
   },
   {
