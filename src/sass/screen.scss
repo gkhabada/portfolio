@@ -493,19 +493,19 @@ svg {
                 }
             }
             &__portfolio {
-                color: #23c869;
+                color: #0d9a49;
                 &:hover {
                     border-bottom: 1px solid darken(#23c869, 5%);
                 }
             }
             &__about-me {
-                color: #23afc8;
+                color: #07869c;
                 &:hover {
                     border-bottom: 1px solid darken(#23afc8, 5%);
                 }
             }
             &__contacts {
-                color: #feb62b ;
+                color: #de9200;
                 &:hover {
                     border-bottom: 1px solid darken(#feb62b, 5%);
                 }
@@ -889,7 +889,7 @@ svg {
     }
 
     a {
-      color: #23c869;
+      color: #0d9a49;
       text-shadow: 0 0 3px rgba(0, 0, 0, .2);
       font-weight: $medium;
     }

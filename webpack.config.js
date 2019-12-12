@@ -50,12 +50,12 @@ module.exports = {
   //оптимизирует код, создает отдельный js файл с общим(одниковым у всех файлов) кодом
   optimization: {
     // minimize output files
-    minimize: false,
+    minimize: true,
     minimizer: [
       new UglifyJSPlugin({
         cache: false,
         sourceMap: true,
-        extractComments: true
+        extractComments: false
       })
     ]
   },

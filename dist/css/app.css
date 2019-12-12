@@ -49,31 +49,38 @@
 */
 @font-face {
   font-family: 'mullerblack';
-  src: url("https://nomail.com.ua/files/eot/f81dc6462c0ac26fdca85351e33cc687.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/f81dc6462c0ac26fdca85351e33cc687.woff") format("woff"), url("https://nomail.com.ua/files/woff2/f81dc6462c0ac26fdca85351e33cc687.woff2") format("woff2"); }
+  src: url("https://nomail.com.ua/files/eot/f81dc6462c0ac26fdca85351e33cc687.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/f81dc6462c0ac26fdca85351e33cc687.woff") format("woff"), url("https://nomail.com.ua/files/woff2/f81dc6462c0ac26fdca85351e33cc687.woff2") format("woff2");
+  font-display: auto; }
 
 @font-face {
   font-family: 'mullerbold';
-  src: url("https://nomail.com.ua/files/eot/8b23c9a4968caba7c3e5a1601c2444e3.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/8b23c9a4968caba7c3e5a1601c2444e3.woff") format("woff"), url("https://nomail.com.ua/files/woff2/8b23c9a4968caba7c3e5a1601c2444e3.woff2") format("woff2"); }
+  src: url("https://nomail.com.ua/files/eot/8b23c9a4968caba7c3e5a1601c2444e3.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/8b23c9a4968caba7c3e5a1601c2444e3.woff") format("woff"), url("https://nomail.com.ua/files/woff2/8b23c9a4968caba7c3e5a1601c2444e3.woff2") format("woff2");
+  font-display: auto; }
 
 @font-face {
   font-family: 'mullerextrabold';
-  src: url("https://nomail.com.ua/files/eot/4b267650e01f1bfe97fd9edab32a5f8a.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/4b267650e01f1bfe97fd9edab32a5f8a.woff") format("woff"), url("https://nomail.com.ua/files/woff2/4b267650e01f1bfe97fd9edab32a5f8a.woff2") format("woff2"); }
+  src: url("https://nomail.com.ua/files/eot/4b267650e01f1bfe97fd9edab32a5f8a.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/4b267650e01f1bfe97fd9edab32a5f8a.woff") format("woff"), url("https://nomail.com.ua/files/woff2/4b267650e01f1bfe97fd9edab32a5f8a.woff2") format("woff2");
+  font-display: auto; }
 
 @font-face {
   font-family: 'mullermedium';
-  src: url("https://nomail.com.ua/files/eot/3bf0f25656a731f527293d030a83b95c.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/3bf0f25656a731f527293d030a83b95c.woff") format("woff"), url("https://nomail.com.ua/files/woff2/3bf0f25656a731f527293d030a83b95c.woff2") format("woff2"); }
+  src: url("https://nomail.com.ua/files/eot/3bf0f25656a731f527293d030a83b95c.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/3bf0f25656a731f527293d030a83b95c.woff") format("woff"), url("https://nomail.com.ua/files/woff2/3bf0f25656a731f527293d030a83b95c.woff2") format("woff2");
+  font-display: auto; }
 
 @font-face {
   font-family: 'mullerlight';
-  src: url("https://nomail.com.ua/files/eot/fbb65c9c80b453f75e56a9154213e181.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/fbb65c9c80b453f75e56a9154213e181.woff") format("woff"), url("https://nomail.com.ua/files/woff2/fbb65c9c80b453f75e56a9154213e181.woff2") format("woff2"); }
+  src: url("https://nomail.com.ua/files/eot/fbb65c9c80b453f75e56a9154213e181.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/fbb65c9c80b453f75e56a9154213e181.woff") format("woff"), url("https://nomail.com.ua/files/woff2/fbb65c9c80b453f75e56a9154213e181.woff2") format("woff2");
+  font-display: auto; }
 
 @font-face {
   font-family: 'mullerregular';
-  src: url("https://nomail.com.ua/files/eot/efd160ca3dbd888898663c368aefb3b4.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/efd160ca3dbd888898663c368aefb3b4.woff") format("woff"), url("https://nomail.com.ua/files/woff2/efd160ca3dbd888898663c368aefb3b4.woff2") format("woff2"); }
+  src: url("https://nomail.com.ua/files/eot/efd160ca3dbd888898663c368aefb3b4.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/efd160ca3dbd888898663c368aefb3b4.woff") format("woff"), url("https://nomail.com.ua/files/woff2/efd160ca3dbd888898663c368aefb3b4.woff2") format("woff2");
+  font-display: auto; }
 
 @font-face {
   font-family: 'mullerthin';
-  src: url("https://nomail.com.ua/files/eot/e6eeaebd201d4fe21fb6a18f9cff82da.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/e6eeaebd201d4fe21fb6a18f9cff82da.woff") format("woff"), url("https://nomail.com.ua/files/woff2/e6eeaebd201d4fe21fb6a18f9cff82da.woff2") format("woff2"); }
+  src: url("https://nomail.com.ua/files/eot/e6eeaebd201d4fe21fb6a18f9cff82da.eot?#iefix") format("embedded-opentype"), url("https://nomail.com.ua/files/woff/e6eeaebd201d4fe21fb6a18f9cff82da.woff") format("woff"), url("https://nomail.com.ua/files/woff2/e6eeaebd201d4fe21fb6a18f9cff82da.woff2") format("woff2");
+  font-display: auto; }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -582,15 +589,15 @@ svg {
       .header .nav .menu__home:hover {
         border-bottom: 1px solid rgba(0, 0, 0, 0); }
       .header .nav .menu__portfolio {
-        color: #23c869; }
+        color: #0d9a49; }
         .header .nav .menu__portfolio:hover {
           border-bottom: 1px solid #1fb25e; }
       .header .nav .menu__about-me {
-        color: #23afc8; }
+        color: #07869c; }
         .header .nav .menu__about-me:hover {
           border-bottom: 1px solid #1f9cb2; }
       .header .nav .menu__contacts {
-        color: #feb62b; }
+        color: #de9200; }
         .header .nav .menu__contacts:hover {
           border-bottom: 1px solid #fead12; }
       .header .nav .menu__telegram img {
@@ -984,7 +991,7 @@ svg {
         font-size: 18px;
         opacity: .9; }
     .experience__item a {
-      color: #23c869;
+      color: #0d9a49;
       text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
       font-weight: "mullermedium"; }
 
@@ -1193,4 +1200,4 @@ svg {
   -o-transition: 0.3s;
   transition: 0.3s; }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3NzL2FwcC5jc3MiLCJzb3VyY2VzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsiLCJzb3VyY2VSb290IjoiIn0=*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3NzL2FwcC5jc3MiLCJzb3VyY2VzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Iiwic291cmNlUm9vdCI6IiJ9*/
