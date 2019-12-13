@@ -149,7 +149,7 @@ function addWorks(works) {
           <div class="work_hover">
             <h3 class="work__title">${works[i].title}</h3>
             <p class="work__text">${works[i].text}</p>
-            <a href="${works[i].link}" class="work__link" target="_blank">Открыть</a>
+            <a href="${works[i].link}" class="work__link" target="_blank" rel="noopener">Открыть</a>
           </div>
           <img src="${works[i].img}" alt="${works[i].title}" title="${works[i].title}">
         </div>
