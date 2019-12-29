@@ -1,5 +1,11 @@
 [
   {
+    "title": "Compas",
+    "text": "Адаптивная верстка + скрпты, многостраничный сайт.",
+    "link": "works/compas/index.html",
+    "img": "img/compas.jpg"
+  },
+  {
     "title": "Игра на JavaScript",
     "text": "Игра на время кликнуть как можно больше элементов",
     "link": "works/game/index.html",
