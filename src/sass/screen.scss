@@ -1,18 +1,9 @@
+@import "variables";
+
 @mixin mauto() {
     margin-right: auto;
     margin-left: auto;
 }
-
-$color-gray: #7f7f7f;
-$color-black: #141414;
-$color-white: #fefefe;
-$thin:  'mullerthin';
-$light: 'mullerlight';
-$regular: 'mullerregular';
-$medium: 'mullermedium';
-$bold: 'mullerbold';
-$extrabold: 'mullerextrabold';
-$black: 'mullerblack';
 
 
 @mixin link_white ($width, $height, $border, $fsize) {
@@ -20,7 +11,7 @@ $black: 'mullerblack';
     height: $height;
     border: none;
     text-align: center;
-    font-family: $regular;
+    font-weight: $regular;
     position: relative;
     display: block;
     line-height: $height - $border * 2;
@@ -37,7 +28,7 @@ $black: 'mullerblack';
 @mixin h2 {
     font-size: 52px;
     text-align: center;
-    font-family: $bold;
+    font-weight: $bold;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -46,7 +37,7 @@ $black: 'mullerblack';
     width: $width;
     height: $height;
     background-color: transparent;
-    font-family: $light;
+    font-weight: $light;
     position: relative;
     display: block;
     font-size: 15px;
@@ -56,6 +47,11 @@ $black: 'mullerblack';
 }
 
 /*    general styles   */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.2;
+}
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -87,7 +83,7 @@ $black: 'mullerblack';
 * {
     box-sizing: border-box;
     text-decoration: none;
-    font-family: $regular;
+    font-weight: $regular;
 }
 
 textarea:focus, input:focus{
@@ -109,6 +105,12 @@ textarea:focus, input:focus{
 .dib {
     display: inline-block;
     vertical-align: top;
+}
+
+.soc__span2 {
+  font-weight: $light;
+  opacity: 0.3;
+  top: 80px;
 }
 
 .hidden{	opacity:0;	}
@@ -457,7 +459,7 @@ svg {
             }
             p {
                 font-size: 27px;
-                font-family: $medium;
+                font-weight: $medium;
                 line-height: 27px;
                 display: inline-block;
                 vertical-align: middle;
@@ -482,7 +484,7 @@ svg {
             &__link {
                 text-decoration: none;
                 padding: 4px 0;
-                font-family: $regular;
+                font-weight: $regular;
                 // text-shadow: 2px 0px 17px rgba(0, 0, 0, 0.08);
             }
 
@@ -533,7 +535,7 @@ svg {
         h2 {
             position: relative;
             top: 190px;
-            font-family: $extrabold;
+            font-weight: $black;
             color: $color-black;
             // color: $color-white;
             font-size: 60px;
@@ -546,7 +548,7 @@ svg {
             @include link_white(260px, 60px, 3px, 26px);
             left: 130px;
             top: 260px;
-            font-family: $regular;
+            font-weight: $regular;
             &:hover {
                 @include link_white_active();
             }
@@ -574,7 +576,7 @@ svg {
 
 
 	&_inner {
-		font-family: $medium;
+		font-weight: $medium;
 		position: relative;
 		width: 900px;
 		margin: 0 auto;
@@ -590,7 +592,7 @@ svg {
 		h5 {
 			color: $color-white;
 			text-align: center;
-			font-family: $regular;
+			font-weight: $regular;
 			text-transform: uppercase;
 			margin-top: 30px;
 		}
@@ -633,7 +635,7 @@ svg {
     h2 {
         @include h2;
         display: block;
-        font-family: $bold;
+        font-weight: $bold;
         margin-bottom: 40px;
     }
 
@@ -693,11 +695,11 @@ svg {
                 text-align: center;
                 padding: 10px;
                 transition: 0.5s;
-                font-family: $regular;
+                font-weight: $regular;
 
                 h3 {
                     font-size: 28px;
-                    font-family: $medium;
+                    font-weight: $medium;
                     margin-top: 40px;
                     margin-bottom: 30px;
 
@@ -718,9 +720,9 @@ svg {
                     bottom: 30px;
                     left: calc(50% - 70px);
                     display: block;
-                    font-family: $medium;
+                    font-weight: $medium;
                     &:hover {
-                        font-family: $bold;
+                        font-weight: $bold;
                         color: $color-white;
                         @include link_white_active();
                     }
@@ -731,10 +733,10 @@ svg {
     &__show-more {
         @include link_white(261px, 51px, 3px, 18px);
         margin: 0px auto 50px;
-        font-family: $medium;
+        font-weight: $medium;
 
         &:hover {
-            font-family: $bold;
+            font-weight: $bold;
             @include link_white_active();
         }
     }
@@ -780,7 +782,7 @@ svg {
 				h1 {
 					margin-bottom: 20px;
 					font-size: 24px;
-					font-family: $medium;
+					font-weight: $medium;
 				}
 
         h2 {
@@ -791,7 +793,7 @@ svg {
         p {
             font-size: 22px;
 						line-height: 26px;
-            font-family: $light;
+            font-weight: $light;
 						margin-bottom: 14px;
         }
 				a {
@@ -803,11 +805,11 @@ svg {
 					li {
 						font-size: 22px;
 						line-height: 1.4;
-            font-family: $light;
+            font-weight: $light;
 						padding-bottom: 3px;
 						margin-bottom: 3px;
 						span {
-							font-family: $medium;
+							font-weight: $medium;
 						}
 						&:not(:last-child) {
 							border-bottom: 1px solid #dedede;
@@ -864,10 +866,10 @@ svg {
       font-size: 24px;
       font-weight: bold;
       margin-bottom: 15px;
-      font-family: $bold;
+      font-weight: $bold;
       text-align: right;
       h6 {
-        font-family: $medium;
+        font-weight: $medium;
         opacity: .7;
         line-height: 24px;
         font-size: 16px;
@@ -878,11 +880,11 @@ svg {
       width: 60%;
       line-height: 1.3;
       h5 {
-        font-family: $medium;
+        font-weight: $medium;
         font-size: 22px;
       }
       p {
-        font-family: $light;
+        font-weight: $light;
         font-size: 18px;
         opacity: .9;
       }
@@ -925,7 +927,7 @@ svg {
 
     &__label-i {
         color: #404040;
-        font-family: $regular;
+        font-weight: $regular;
         font-size: 14px;
         position: relative;
         left: 12px;
@@ -935,7 +937,7 @@ svg {
 
     &__label-t {
         color: #404040;
-        font-family: $regular;
+        font-weight: $regular;
         font-size: 14px;
         position: relative;
         left: 53px;
@@ -957,7 +959,7 @@ svg {
         width: 210px;
         height: 50px;
         background-color: #23c869;
-        font-family: $regular;
+        font-weight: $regular;
         position: relative;
         display: block;
         font-size: 18px;
@@ -968,7 +970,7 @@ svg {
         cursor: pointer;
 
         &:hover {
-            font-family: $medium;
+            font-weight: $medium;
             transition: 0.3s;
             background-color: #27b262;
         }
@@ -988,7 +990,7 @@ svg {
           overflow: hidden;
           width: 0;
           color: $color-white;
-          font-family: $light;
+          font-weight: $light;
           font-size: 17px;
           margin-top: 20px;
           transition: 0.2s;
@@ -1021,7 +1023,7 @@ svg {
         font-size: 18px;
         margin-left: 86px;
         color: $color-white;
-        font-family: $light;
+        font-weight: $light;
         letter-spacing: 1.55px;
     }
 }
