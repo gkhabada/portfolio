@@ -1,4 +1,7 @@
-/node_modules
-/webdis
-
 /dist/works
+
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
