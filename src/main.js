@@ -1,8 +1,10 @@
-import './sass/reset.scss';
-import './sass/screen.scss';
-import './sass/media.scss';
+import './scss/variables.scss';
+import './scss/reset.scss';
+import './scss/screen.scss';
+import './scss/media.scss';
 
 document.addEventListener('DOMContentLoaded', function() {
+
   // button scrollTop
   document.addEventListener('scroll', function() {
     let top = document.querySelector('html').scrollTop;
@@ -52,103 +54,88 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // day/night mode
-    const dn = JSON.parse(localStorage.getItem('dayNight'));
-    const dnCheckbox = document.querySelector('#toggle_checkbox');
-    const aboutMeImg = document.querySelector('.about-me__photo img');
-
-  
-    if(dn) {
-      dnCheckbox.checked = true;
-      dayNight(dn)
-    }
-
-    dnCheckbox.addEventListener('change', function() {
-      localStorage.setItem('dayNight', JSON.stringify(this.checked));
-      dayNight(this.checked)
-    });
+  const dn = JSON.parse(localStorage.getItem('dayNight'));
+  const dnCheckbox = document.querySelector('#toggle_checkbox');
+  const aboutMeImg = document.querySelector('.about-me__photo img');
 
 
-    function dayNight (time = false) {
-      let now = Number(new Date().toLocaleTimeString().substring(0, 2))
-      if(time) {
-        document.querySelector('.day-text').classList.add('night-text');
-        document.querySelector('.day-text').classList.remove('day-text');
-        document.querySelector('.day-bg').classList.add('night-bg');
-        document.querySelector('.day-bg').classList.remove('day-bg');
-        document.querySelector('.day-button').classList.add('night-button');
-        document.querySelector('.day-button').classList.remove('day_button');
-        if(now >= 23 || now <= 6) aboutMeImg.setAttribute('src', 'img/about_me_night.jpg');
-      } else {
-        document.querySelector('.night-text').classList.add('day-text');
-        document.querySelector('.night-text').classList.remove('night-text')
-        document.querySelector('.night-bg').classList.add('day-bg');
-        document.querySelector('.night-bg').classList.remove('night-bg');
-        document.querySelector('.night-button').classList.add('day_button');
-        document.querySelector('.night-button').classList.remove('night-button');
-        if(now >= 23 || now <= 6) aboutMeImg.setAttribute('src', 'img/about_me.jpg');
-      }
-    }
-
-
-// show works from JSON
-let allWorks = null
-
-let promise = fetch('./assets/works.json')
-  .then(function(response) {
-  if(response.status === 200) {
-    return response.json();
-  } else {
-    return null
+  if(dn) {
+    dnCheckbox.checked = true;
+    dayNight(dn)
   }
-  })
-  .then(function(json) {
-    if(json !== null) {
-      allWorks = json
-      addWorks(allWorks)
-    }
+
+  dnCheckbox.addEventListener('change', function() {
+    localStorage.setItem('dayNight', JSON.stringify(this.checked));
+    dayNight(this.checked)
   });
 
-let showedWorkdIndex = 0
-let worksDiv = document.querySelector('.works')
-function addWorks(works) {
-  if(works !== null && works.length >= showedWorkdIndex) {
-    for(let i = showedWorkdIndex; i < showedWorkdIndex + 8; i++) {
-      if(works[i] !== undefined) {
-        let work = `
-        <div class="work">
-          <div class="work_hover">
-            <h3 class="work__title">${works[i].title}</h3>
-            <p class="work__text">${works[i].text}</p>
-            <a href="${works[i].link}" class="work__link" target="_blank" rel="noopener">Открыть</a>
-          </div>
-          <img src="./assets/${works[i].img}" alt="${works[i].title}" title="${works[i].title}">
-        </div>
-        `
-        worksDiv.insertAdjacentHTML('beforeend', work);
-      }
+
+  function dayNight (time = false) {
+    let now = Number(new Date().toLocaleTimeString().substring(0, 2))
+    if(time) {
+      document.querySelector('.day-text').classList.add('night-text');
+      document.querySelector('.day-text').classList.remove('day-text');
+      document.querySelector('.day-bg').classList.add('night-bg');
+      document.querySelector('.day-bg').classList.remove('day-bg');
+      document.querySelector('.day-button').classList.add('night-button');
+      document.querySelector('.day-button').classList.remove('day_button');
+      if(now >= 23 || now <= 6) aboutMeImg.setAttribute('src', 'img/about_me_night.jpg');
+    } else {
+      document.querySelector('.night-text').classList.add('day-text');
+      document.querySelector('.night-text').classList.remove('night-text')
+      document.querySelector('.night-bg').classList.add('day-bg');
+      document.querySelector('.night-bg').classList.remove('night-bg');
+      document.querySelector('.night-button').classList.add('day_button');
+      document.querySelector('.night-button').classList.remove('night-button');
+      if(now >= 23 || now <= 6) aboutMeImg.setAttribute('src', 'img/about_me.jpg');
     }
-    setWorkCardHeight();
-    document.addEventListener('resize', setWorkCardHeight);
-
-
-    showedWorkdIndex += 8
-
-    works.length <= showedWorkdIndex ? $('.portfolio__show-more').hide(100) : null
   }
-}
 
-function setWorkCardHeight() {
-  const w = document.querySelector('.work').clientWidth;
-  const h = parseInt(w) / 100 * 56.25;
-  const workCards = document.querySelectorAll('.work');
-  for (let card of workCards) {
-    card.style.height = `${h}px`;
+
+  // show works from JSON
+  let promise = fetch('./assets/works.json')
+    .then(function(response) {
+      if(response.status === 200) {
+        return response.json();
+      }
+      return null;
+    })
+    .then(function(json) {
+      if(json !== null) {
+        addWorks(json)
+      }
+    });
+
+  let worksDiv = document.querySelector('.works');
+  
+  function addWorks(works) {
+    if(works !== null && works.length) {
+      for(let i = 0; i < works.length; i++) {
+        if(works[i] !== undefined) {
+          let work = `
+          <div class="work">
+            <div class="work_hover">
+              <h3 class="work__title">${works[i].title}</h3>
+              <p class="work__text">${works[i].text}</p>
+              <a href="${works[i].link}" class="work__link" target="_blank" rel="noopener">Открыть</a>
+            </div>
+            <img src="./assets/${works[i].img}" alt="${works[i].title}" title="${works[i].title}">
+          </div>
+          `
+          worksDiv.insertAdjacentHTML('beforeend', work);
+        }
+      }
+      setWorkCardHeight();
+      document.addEventListener('resize', setWorkCardHeight);
+    }
   }
-}
 
-document.querySelector('.portfolio__show-more').addEventListener('click', () => {
-  addWorks(allWorks)
-});
-
-
+  function setWorkCardHeight() {
+    const w = document.querySelector('.work').clientWidth;
+    const h = parseInt(w) / 100 * 56.25;
+    const workCards = document.querySelectorAll('.work');
+    for (let card of workCards) {
+      card.style.height = `${h}px`;
+    }
+  }
 });
