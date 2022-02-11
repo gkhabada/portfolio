@@ -63,34 +63,15 @@
     </div>
 
     <!-- day/night -->
-    <input type="checkbox" id="toggle_checkbox">
+    <!-- <input type="checkbox" id="toggle_checkbox"> -->
 
     <label for="toggle_checkbox" class="toggle_checkbox__label">
-      <div id="star">
+      <!-- <div id="star">
         <div class="star" id="star-1">★</div>
         <div class="star" id="star-2">★</div>
       </div>
-      <div id="moon"></div>
+      <div id="moon"></div> -->
     </label>
-
-    <!-- loading -->
-
-    <div class="loader">
-      <svg>
-        <g>
-          <path d="M 50,100 A 1,1 0 0 1 50,0"/>
-        </g>
-        <g>
-          <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
-        </g>
-        <defs>
-          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
 
     <!-- header -->
     <header class="header day-bg" id="header">
@@ -144,16 +125,15 @@
         <div class="about-me__info">
           <h2>Обо мне</h2>
           <h1>Меня зовут Гаджи, <span class="about-me__old">24</span> года. Front-end разработчик на <a href="https://vuejs.org/" target="_blank" rel="nofollow noopener">Vue.js</a>.</h1>
-          <p>Веб программированием занимаюсь с начала 2016 года. За это время сверстал не мало
-            макетов. Разбираюсь в web дизайне.</p>
+          <p>Нет предела совершенству, главное не останавливаться.</p>
           <p>Основные мои навыки:</p>
           <ul>
-            <li><span>html5</span> (pug);</li>
+            <li><span>html5</span> (pug, blade);</li>
             <li><span>css3</span> (sass/less);</li>
-            <li><span>javascript</span> (vue.js[router, vuex], typescript, fetch, axios);</li>
+            <li><span>javascript</span> (vue.js[router, vuex], typescript, fetch, axios, jquery);</li>
             <li>Adobe Photoshop, Figma;</li>
             <li>Английский (базовые знания);</li>
-            <li>Git</li>
+            <li>Git, Docker</li>
           </ul>
         </div>
       </div>
@@ -165,6 +145,9 @@
     <!-- experience  -->
     <div class="experience day-bg">
       <div class="section">
+
+        <pug src="./src/pug/career.pug"></pug>
+
         <div class="experience__item day-text">
           <img src="./assets/img/study.svg" alt="учеба">
           <div class="experience__item_header">
@@ -179,51 +162,13 @@
           </p>
           </div>
         </div>
-
-        <div class="experience__item day-text">
-          <img src="./assets/img/work.svg" alt="работа">
-          <div class="experience__item_header">
-            <h4>Системный администратор</h4>
-            <h6>26 Февраль 2016 - 1 Февраль 2019</h6>
-          </div>
-          <div class="experience__item_body">
-            <h5>Гуманитарно-педагогический колледж</h5>
-            <p>Обслуживал компютеры, принтеры, камеры и тд. Делал баннеры, грамоты на Adobe Photoshop.</p>
-          </div>
-        </div>
-
-        <div class="experience__item day-text">
-          <img src="./assets/img/work.svg" alt="работа">
-          <div class="experience__item_header">
-            <h4>Фриланс</h4>
-            <h6>Февраль 2017 - Февраль 2019</h6>
-          </div>
-          <div class="experience__item_body">
-            <h5>Верстальщик</h5>
-            <p>Верстал страницы, лендинги, мобильную версию сайта, виджет и тд. Иногда по другой работе были перерывы</p>
-          </div>
-        </div>
-
-        <div class="experience__item day-text">
-          <img src="./assets/img/work.svg" alt="работа">
-          <div class="experience__item_header">
-            <h4>Frontend разработчик</h4>
-            <h6>1 Февраль 2019 - По сей день</h6>
-          </div>
-          <div class="experience__item_body">
-            <h5>Agency</h5>
-            <p>На данный момент работаю в агентстве frontend разработчиком на vue.js. Работаю над платформой, генерирующей сайты управлениям образования, учителям персональный сайт портфолио, школам, и детским садам. Основной стек <a href="https://vuejs.org/" target="_blank" rel="nofollow noopener">Vue.js</a>, jquery и laravel(blade)</p>
-          </div>
-        </div>
       </div>
     </div>
 
     <!-- portfolio -->
     <div class="portfolio day-bg" id="portfolio">
       <h2 class="day-text">Некоторые мои работы</h2>
-
       <div class="best-project">
-
         <div class="best-project_inner">
 
           <h4>Сайт фотографа Мухтара Гаджидадаева</h4>
@@ -235,7 +180,7 @@
         </div>
       </div>
 
-      <div class="works"></div>
+      <pug src="./src/pug/works.pug"></pug>
     </div>
 
     <div id="contacts"></div>
@@ -260,9 +205,9 @@
             </a>
           </li>
           <li class="soc__item dib">
-            <a href="mailto:gadzhidadaev95@gmail.com" target="_blank" rel="nofollow noopener">
+            <a href="mailto:gadzhi7.7.7@mail.ru" target="_blank" rel="nofollow noopener">
               <img src="./assets/img/2email.svg" alt="email icon">
-              <span class="dib soc__span2">gadzhidadaev95@gmail.com</span>
+              <span class="dib soc__span2">gadzhi7.7.7@mail.ru</span>
             </a>
           </li>
         </ul>

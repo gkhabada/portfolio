@@ -174,7 +174,7 @@ textarea:focus, input:focus{
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: 1px solid #000;
-    cursor: pointer;
+    // cursor: pointer;
     transition: 0.3s ease background-color;
     overflow: hidden;
     z-index: 5;
@@ -363,21 +363,8 @@ textarea:focus, input:focus{
     margin-left: -8px;
     animation-fill-mode: both;
 }
-.front:hover {	animation-name: rubbb; color: #23c869!important;	}
-
-// loader
-.loader {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: rgba($color-white, 0.5);
-  z-index: 7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s
+.front:hover {	
+  animation-name: rubbb; color: #23c869!important;
 }
 
 $transition-duration: 2s;
@@ -642,16 +629,11 @@ svg {
     .works {
         display: -webkit-flex;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         flex-wrap: wrap;
 				padding-bottom: 60px;
 
         .work {
-            // flex-basis: 25%;
-            // position: relative;
-            // min-height: 150px;
-            // background-color: #ccc;
-
 						flex-basis: 24%;
 				    position: relative;
 				    min-height: 150px;
@@ -662,6 +644,7 @@ svg {
 				    box-shadow: 0px 1px 20px rgba(0,0,0,0.2);
 				    border-radius: 10px;
 				    overflow: hidden;
+            aspect-ratio: 16 / 9;
 
             &:hover .work_hover{
                 opacity: 1;
@@ -673,6 +656,7 @@ svg {
                 transform: scale(1.2);
                 transition: 0.5s;
             }
+
             img {
                 width: 100%;
                 height: 100%;
