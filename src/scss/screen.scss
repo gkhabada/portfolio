@@ -363,7 +363,7 @@ textarea:focus, input:focus{
     margin-left: -8px;
     animation-fill-mode: both;
 }
-.front:hover {	
+.front:hover {
   animation-name: rubbb; color: #23c869!important;
 }
 
@@ -521,6 +521,7 @@ svg {
 
         h2 {
             position: relative;
+            letter-spacing: 10px;
             top: 190px;
             font-weight: $black;
             color: $color-black;
