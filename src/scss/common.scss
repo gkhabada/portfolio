@@ -1,0 +1,179 @@
+@import "variables";
+
+/*    general styles   */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(51, 51, 51, 0.3);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(51, 51, 51, 0.3);
+  box-shadow: inset 0px 0px 5px 0px rgba(51, 51, 51, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  transition: 0.5s;
+  background: -moz-linear-gradient(top, rgba(#73c696, 1) 0%, rgba(#6ba6af, 1) 50%, rgba(#fcca6f, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(#73c696, 1) 0%, rgba(#6ba6af, 1) 50%, rgba(#fcca6f, 1) 100%);
+  background: linear-gradient(to bottom, rgba(#73c696, 1) 0%, rgba(#6ba6af, 1) 50%, rgba(#fcca6f, 1) 100%);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transition: 0.5s;
+  background: -moz-linear-gradient(
+    top,
+    rgba(35, 200, 105, 1) 0%,
+    rgba(31, 156, 178, 1) 50%,
+    rgba(254, 182, 43, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(35, 200, 105, 1) 0%,
+    rgba(31, 156, 178, 1) 50%,
+    rgba(254, 182, 43, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(35, 200, 105, 1) 0%,
+    rgba(31, 156, 178, 1) 50%,
+    rgba(254, 182, 43, 1) 100%
+  );
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: $regular;
+}
+
+#wrapper {
+  min-width: 320px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 250px;
+  background-color: $color-white;
+  transition: 0.3s;
+}
+
+.section {
+  width: 1020px;
+  margin-inline: auto;
+}
+
+@keyframes rotage {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    filter: grayscale(100%);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+$transition-duration: 2s;
+$path-length: 157px;
+
+svg {
+  overflow: visible;
+  width: 100px;
+  height: 150px;
+
+  g {
+    animation: slide $transition-duration linear infinite;
+
+    &:nth-child(2) {
+      animation-delay: calc($transition-duration / 4);
+
+      path {
+        animation-delay: calc($transition-duration / 4);
+        stroke-dasharray: 0px $path-length + 1;
+        stroke-dashoffset: 1px;
+      }
+    }
+  }
+
+  path {
+    stroke: url(#gradient);
+    stroke-width: 20px;
+    stroke-linecap: round;
+    fill: none;
+    stroke-dasharray: 0 $path-length;
+    stroke-dashoffset: 0;
+    animation: escalade $transition-duration cubic-bezier(0.8, 0, 0.2, 1) infinite;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes escalade {
+  0% {
+    stroke-dasharray: 0 $path-length;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: $path-length - 1 $path-length;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: $path-length - 1 $path-length;
+    stroke-dashoffset: -($path-length - 1);
+  }
+}
+
+.fixed {
+  position: fixed;
+  z-index: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 1150px) {
+  .section {
+    width: 970px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 980px) {
+  .section {
+    width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    width: 470px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+}

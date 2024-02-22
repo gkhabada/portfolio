@@ -1,59 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-  <pug src="./src/pug/head.pug"></pug>
+<pug src="./src/pug/head.pug"></pug>
 
 <body>
-  <div id="wrapper" class="day-bg">
-
-    <!-- scroll top -->
-    <div class="scroll-top">
-      <p>&uArr;</p>
-    </div>
-
-    <!-- day/night -->
-    <!-- <input type="checkbox" id="toggle_checkbox"> -->
-
-    <label for="toggle_checkbox" class="toggle_checkbox__label">
-      <!-- <div id="star">
-        <div class="star" id="star-1">★</div>
-        <div class="star" id="star-2">★</div>
-      </div>
-      <div id="moon"></div> -->
-    </label>
-
-    <!-- header -->
+  <div id="wrapper">
     <pug src="./src/pug/first.pug"></pug>
 
     <!-- about-me -->
     <pug src="./src/pug/about.pug"></pug>
 
     <!-- experience  -->
-    <div class="experience day-bg">
-      <div class="section">
-
-        <pug src="./src/pug/career.pug"></pug>
-
-        <div class="experience__item day-text">
-          <img src="./assets/img/study.svg" alt="учеба">
-          <div class="experience__item_header">
-            <h4>Учеба в Институте</h4>
-            <h6>Сентябрь 2012 - Июль 2016</h6>
-          </div>
-          <div class="experience__item_body">
-            <h5>Бизнес-информатика</h5>
-            <p>
-              Окончил Дагестанский Гуманитарный Институт, факультет "Экономики и Информатики"
-              <a href="http://www.daggum.ru" target="_blank" rel="nofollow noopener">ДГИ</a>.
-          </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <pug src="./src/pug/career.pug"></pug>
 
     <!-- portfolio -->
-    <div class="portfolio day-bg" id="portfolio">
-      <h2 class="day-text">Некоторые мои работы</h2>
+    <div class="portfolio" id="portfolio">
+      <h2>Некоторые мои работы</h2>
       <div class="best-project">
         <div class="best-project_inner">
 
@@ -75,9 +36,6 @@
   <div class="fixed">
     <pug src="./src/pug/footer.pug"></pug>
   </div>
-  <!-- Yandex.Metrika counter -->
-  <noscript><div><img src="https://mc.yandex.ru/watch/55392121" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
   <script type="module" src="./src/main.js"></script>
 </body>
 

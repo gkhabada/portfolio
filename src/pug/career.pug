@@ -1,4 +1,4 @@
-- 
+-
   var career = [
     {
       "title": "Middle frontend developer",
@@ -23,15 +23,27 @@
       "duration": "26 Февраль 2016 - 1 Февраль 2019",
       "place": "Гуманитарно-педагогический колледж",
       "text": "Обслуживал компьютеры, принтеры, камеры и тд. Делал баннеры, грамоты на Adobe Photoshop."
+    },
+    {
+      "title": "Учеба в Институте",
+      "duration": "Сентябрь 2012 - Июль 2016",
+      "place": "Бизнес-информатика",
+      "text": "Окончил Дагестанский Гуманитарный Институт, факультет \"Экономики и Информатики\"",
+      "icon": "./assets/img/study.svg",
     }
   ]
 
-each item in career
-  .experience__item.day-text
-      img(src='./assets/img/work.svg' alt='работа')
-      .experience__item_header
-        h4= item.title
-        h6= item.duration
-      .experience__item_body
-        h5= item.place
-        p= item.text
+.experience
+  .section
+    each item in career
+      .experience__item
+        img(
+          src=item.icon || './assets/img/work.svg'
+          alt=item.title
+        )
+        .experience__item_header
+          h4= item.title
+          h6= item.duration
+        .experience__item_body
+          h5= item.place
+          p= item.text
