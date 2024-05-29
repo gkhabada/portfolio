@@ -1,16 +1,16 @@
 {
   "name": "gkhabada",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.2.10",
+    "vite": "^5.2.12",
     "vite-plugin-pug": "^0.3.2"
   },
   "dependencies": {
-    "sass": "^1.76.0"
+    "sass": "^1.77.2"
   }
 }
