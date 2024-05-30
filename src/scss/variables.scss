@@ -1,9 +1,8 @@
-$color-gray: #7f7f7f;
-$color-black: #141414;
-$color-white: #fefefe;
-$thin:  100;
-$light: 300;
-$regular: 400;
-$medium: 500;
-$bold: 700;
-$black: 900;
+:root {
+  --main-bg: #ffffff;
+  --experience-bg: #161513;
+  --gradient: linear-gradient(300.79deg, #60E2FF 41.87%, #333CFF 108.46%);
+  --main-color: #161513;
+  --accent-color: #49494E;
+}
+

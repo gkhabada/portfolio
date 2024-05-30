@@ -1,0 +1,45 @@
+-
+  var projects = [
+    {
+      "title": "Тетрис",
+      "link": "https://gkhabada.github.io/gkhabada-tetris/",
+      "img": "tetris"
+    },
+    //- {
+    //-   "title": "Allrebates",
+    //-   "link": "./dist/works/allrebates/index.html",
+    //-   "img": "allrebates"
+    //- },
+    //- {
+    //-   "title": "Compas",
+    //-   "link": "https://gkhabada.github.io/compas/",
+    //-   "img": "compas"
+    //- },
+    {
+      "title": "Игра на JavaScript",
+      "link": "https://gkhabada.github.io/fastclick_game/",
+      "img": "game"
+    },
+    {
+      "title": "Фильмы с tmdb",
+      "link": "https://gkhabada.github.io/tmdb_api/",
+      "img": "tmdb"
+    },
+    {
+      "title": "Криптовалюта",
+      "link": "https://gkhabada.github.io/Cryptocompare/",
+      "img": "cryptocompare"
+    },
+  ]
+
+section#projects.projects.container
+  .projects__header
+    h3.block__title Пет-проекты
+    h5.block__description Тестовые проекте, которыми занимался в свободное время для освоение новых технологий.
+
+  .projects__items
+    each project in projects
+      a.projects__item(href=project.link target="black")
+        img.projects__item_image(src='./images/projects/' + project.img + '.webp' alt=project.title title=project.title)
+        h6.projects__item_title= project.title
+

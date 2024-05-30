@@ -1,0 +1,104 @@
+.zero {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+
+  .zero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .zero__hi {
+    // font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 160%;
+    color: #8A8A8E;
+  }
+
+  .zero__title {
+    font-weight: 700;
+
+    span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      font-weight: 900;
+    }
+  }
+
+  .zero__about {
+    max-width: 660px;
+
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 120%;
+    color: var(--accent-color);
+
+    a {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    .about-me__old {
+      padding-left: 4px;
+    }
+  }
+
+  .zero__actions {
+    display: flex;
+    gap: 24px;
+  }
+
+  .zero__link {
+    display: block;
+    padding: 14px 30px;
+    border: 2px solid var(--main-color);
+    border-radius: 32px;
+    box-sizing: border-box;
+    transition: 300ms;
+
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 120%;
+
+    &--github {
+      background-color: var(--main-color);
+      color: var(--main-bg);
+
+      &:hover {
+        background-color: var(--main-bg);
+        color: var(--main-color);
+      }
+    }
+
+    &--telegram {
+      background-color: var(--main-bg);
+      color: var(--main-color);
+
+      &:hover {
+        background-color: var(--main-color);
+        color: var(--main-bg);
+      }
+    }
+  }
+
+  .zero__image {
+    width: 430px;
+    height: 430px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3.5rem;
+  }
+}

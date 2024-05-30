@@ -1,0 +1,41 @@
+// best project
+.projects {
+  .projects__header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  .block__description {
+    max-width: 460px;
+  }
+
+  .projects__items {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 20px));
+    row-gap: 72px;
+    column-gap: 40px;
+  }
+
+  .projects__item {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .projects__item_image {
+    width: 100%;
+    aspect-ratio: 28 / 15;
+    background-color: var(--accent-color);
+    border-radius: 2rem;
+  }
+
+  .projects__item_title {
+    text-indent: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--main-color);
+  }
+}
