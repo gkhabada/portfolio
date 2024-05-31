@@ -26,11 +26,7 @@
     font-weight: 700;
 
     span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
+      @include gradient-text;
       font-weight: 900;
     }
   }
@@ -44,11 +40,11 @@
     color: var(--accent-color);
 
     a {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
+      color: #42b883;
+
+      &:hover {
+        @include gradient-text;
+      }
     }
 
     .about-me__old {
@@ -63,8 +59,6 @@
 
   .zero__link {
     display: block;
-    padding: 14px 30px;
-    border: 2px solid var(--main-color);
     border-radius: 32px;
     box-sizing: border-box;
     transition: 300ms;
@@ -74,22 +68,23 @@
     line-height: 120%;
 
     &--github {
+      padding: 16px 32px;
       background-color: var(--main-color);
       color: var(--main-bg);
 
       &:hover {
-        background-color: var(--main-bg);
-        color: var(--main-color);
+        background: var(--gradient);
       }
     }
 
     &--telegram {
+      padding: 14px 30px;
+      border: 2px solid var(--main-color);
       background-color: var(--main-bg);
       color: var(--main-color);
 
       &:hover {
-        background-color: var(--main-color);
-        color: var(--main-bg);
+        @include gradient-text;
       }
     }
   }
@@ -99,6 +94,40 @@
     height: 430px;
     object-fit: cover;
     object-position: center;
+    border-radius: 3.5rem;
+
+    &.zero__image--circle {
+      animation-name: toCircle;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    &.zero__image--square {
+      animation-name: toSquare;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes toCircle {
+  from {
+    transform: rotate(0);
+    border-radius: 3.5rem;
+  }
+  to {
+    transform: rotate(360deg);
+    border-radius: 50%;
+  }
+}
+
+@keyframes toSquare {
+  from {
+    transform: rotate(0);
+    border-radius: 50%;
+  }
+  to {
+    transform: rotate(360deg);
     border-radius: 3.5rem;
   }
 }

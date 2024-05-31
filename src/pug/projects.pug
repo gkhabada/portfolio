@@ -40,6 +40,7 @@ section#projects.projects.container
   .projects__items
     each project in projects
       a.projects__item(href=project.link target="black")
-        img.projects__item_image(src='./images/projects/' + project.img + '.webp' alt=project.title title=project.title)
+        .projects__item_image
+          img(src='./images/projects/' + project.img + '.webp' alt=project.title title=project.title)
         h6.projects__item_title= project.title
 

@@ -21,7 +21,8 @@ footer {
     img {
       width: 46px;
       height: 46px;
-      object-fit: cover;
+      object-fit: contain;
+      background-color: #2A2A31;
       border-radius: 8px;
     }
 
@@ -39,10 +40,21 @@ footer {
     align-items: center;
     gap: 24px;
 
-    .footer__soc_link img {
+    .footer__soc_link {
       width: 44px;
       height: 44px;
-      border-radius: 8px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        background-color: #2A2A31;
+
+        &:hover {
+          background: var(--gradient);
+        }
+      }
     }
   }
 
@@ -67,5 +79,9 @@ footer {
     font-size: 1.25rem;
     line-height: 120%;
     color: var(--main-bg);
+
+    &:hover {
+      @include gradient-text;
+    }
   }
 }

@@ -18,7 +18,8 @@ header {
     img {
       width: 46px;
       height: 46px;
-      object-fit: cover;
+      object-fit: contain;
+      background-color: #2A2A31;
       border-radius: 8px;
     }
 
@@ -44,6 +45,10 @@ header {
       font-size: 1.25rem;
       line-height: 120%;
       color: var(--main-color);
+
+      &:hover {
+        @include gradient-text;
+      }
     }
 
     .header__menu_btn {
@@ -56,6 +61,10 @@ header {
       font-weight: 400;
       font-size: 1.25rem;
       line-height: 120%;
+
+      &:hover {
+        background: var(--gradient);
+      }
     }
   }
 }

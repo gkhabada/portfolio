@@ -63,7 +63,7 @@ section#experience.experience
     .experience__items
       each item, index in career
         if index !== 0
-          img(src="/images/experience/divider.svg" alt="")
+          img.experience__item_divider(src="/images/experience/divider.svg" alt="")
 
         .experience__item
           span.experience__item_year= item.startYear

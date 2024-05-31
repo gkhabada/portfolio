@@ -22,20 +22,47 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    &:hover {
+      @include gradient-text;
+
+      .projects__item_image::after {
+        opacity: 0.5;
+      }
+    }
   }
 
   .projects__item_image {
-    width: 100%;
     aspect-ratio: 28 / 15;
     background-color: var(--accent-color);
     border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+      opacity: 0;
+      background: var(--gradient);
+      transition: 300ms;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .projects__item_title {
+    width: fit-content;
     text-indent: 2rem;
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 1;
     color: var(--main-color);
+    transition: 200ms;
   }
 }
