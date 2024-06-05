@@ -63,6 +63,7 @@ html {
   font-family: 'Work Sans', sans-serif;
   font-size: 16px;
   line-height: 120%;
+  overflow-x: hidden;
 }
 
 body {
@@ -84,14 +85,12 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f5f5;
+  background-color: var(--lite-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
   transition: 0.5s;
-  // background: var(--gradient);
-  background-color: #49494E;
+  background-color: #8A8A8E;
   border-radius: 12px;
 }
 
@@ -109,155 +108,6 @@ a {
   }
 }
 
-$transition-duration: 2s;
-$path-length: 157px;
-
-svg {
-  overflow: visible;
-  width: 100px;
-  height: 150px;
-
-  g {
-    animation: slide $transition-duration linear infinite;
-
-    &:nth-child(2) {
-      animation-delay: calc($transition-duration / 4);
-
-      path {
-        animation-delay: calc($transition-duration / 4);
-        stroke-dasharray: 0px $path-length + 1;
-        stroke-dashoffset: 1px;
-      }
-    }
-  }
-
-  path {
-    stroke: url(#gradient);
-    stroke-width: 20px;
-    stroke-linecap: round;
-    fill: none;
-    stroke-dasharray: 0 $path-length;
-    stroke-dashoffset: 0;
-    animation: escalade $transition-duration cubic-bezier(0.8, 0, 0.2, 1) infinite;
-  }
-}
-
-@keyframes slide {
-  0% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(50px);
-  }
-}
-
-@keyframes escalade {
-  0% {
-    stroke-dasharray: 0 $path-length;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: $path-length - 1 $path-length;
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dasharray: $path-length - 1 $path-length;
-    stroke-dashoffset: -($path-length - 1);
-  }
-}
-
-
-@keyframes rubbb {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.rubbb {
-  animation-duration: 0.7s;
-  display: inline-block;
-  // margin-left: -8px;
-  animation-fill-mode: both;
-}
-.rubbb:hover {
-  animation-name: rubbb;
-  color: #23c869 !important;
-}
-
-@keyframes front {
-  from,
-  20%,
-  53%,
-  80%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  40%,
-  43% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transform: translate3d(0, -30px, 0);
-    transform: translate3d(0, -30px, 0);
-  }
-  70% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transform: translate3d(0, -15px, 0);
-    transform: translate3d(0, -15px, 0);
-  }
-  90% {
-    -webkit-transform: translate3d(0, -4px, 0);
-    transform: translate3d(0, -4px, 0);
-  }
-}
-.front {
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-transform-origin: center bottom;
-  transform-origin: center bottom;
-}
-.front {
-  animation-duration: 0.7s;
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-transform-origin: center bottom;
-  transform-origin: center bottom;
-  display: inline-block;
-  // margin-left: -8px;
-  animation-fill-mode: both;
-}
-.front:hover {
-  animation-name: rubbb;
-  color: #23c869 !important;
-}
 
 // new
 

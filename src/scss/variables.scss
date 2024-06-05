@@ -1,8 +1,20 @@
 :root {
   --main-bg: #ffffff;
+  --lite-bg: #f5f5f5;
   --experience-bg: #161513;
   --gradient: linear-gradient(300.79deg, #60E2FF 41.87%, #333CFF 108.46%);
   --main-color: #161513;
   --accent-color: #49494E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg: #161513;
+    --lite-bg: #252525;
+    --experience-bg: #2A2A31;
+    --gradient: linear-gradient(300.79deg, #60E2FF 41.87%, #333CFF 108.46%);
+    --main-color: #FFFFFF;
+    --accent-color: #C5C5C5;
+  }
 }
 
