@@ -63,13 +63,13 @@ section#experience.experience
     .experience__items
       each item, index in career
         if index !== 0
-          img.experience__item_divider(src="/images/experience/divider.svg" alt="")
+          img.experience__item_divider(src="./images/experience/divider.svg" alt="divider")
 
         .experience__item
           span.experience__item_year= item.startYear
           .experience__item_line
           img.experience__item_logo(
-            src='/images/experience/' + item.icon
+            src='./images/experience/' + item.icon
             alt=item.title
           )
 
@@ -80,7 +80,7 @@ section#experience.experience
               span.company__name= item.company
               p.company__work= item.text
             img.company__logo(
-              src='/images/experience/' + item.icon
+              src='./images/experience/' + item.icon
               alt=item.title
             )
 
