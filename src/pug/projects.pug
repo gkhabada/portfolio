@@ -5,16 +5,6 @@
       "link": "https://gkhabada.github.io/gkhabada-tetris/",
       "img": "tetris"
     },
-    //- {
-    //-   "title": "Allrebates",
-    //-   "link": "./dist/works/allrebates/index.html",
-    //-   "img": "allrebates"
-    //- },
-    //- {
-    //-   "title": "Compas",
-    //-   "link": "https://gkhabada.github.io/compas/",
-    //-   "img": "compas"
-    //- },
     {
       "title": "Игра на JavaScript",
       "link": "https://gkhabada.github.io/fastclick_game/",
@@ -30,6 +20,16 @@
       "link": "https://gkhabada.github.io/Cryptocompare/",
       "img": "cryptocompare"
     },
+    //-  {
+    //-   "title": "Compas",
+    //-   "link": "https://gkhabada.github.io/compas/",
+    //-   "img": "compas"
+    //- },
+    //- {
+    //-   "title": "Allrebates",
+    //-   "link": "./dist/works/allrebates/index.html",
+    //-   "img": "allrebates"
+    //- },
   ]
 
 section#projects.projects.container
@@ -41,6 +41,6 @@ section#projects.projects.container
     each project in projects
       a.projects__item(href=project.link target="black")
         .projects__item_image
-          img(src='./images/projects/' + project.img + '.webp' alt=project.title title=project.title)
+          img(src=`./images/projects/${project.img}.webp` alt=project.title title=project.title)
         h6.projects__item_title= project.title
 

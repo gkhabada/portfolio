@@ -2,11 +2,21 @@
 .tech {
   padding-bottom: 100px;
 
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0;
+  }
+
   .tech__header {
     display: flex;
     justify-content: space-between;
     align-items: start;
     margin-bottom: 80px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
   }
 
   .block__description {
@@ -17,20 +27,43 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 48px 83px;
+    gap: 3rem 5.125rem;
+
+    @media screen and (max-width: 768px) {
+      gap: 3rem 2rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      justify-content: space-between;
+      gap: 3rem 0;
+    }
   }
 
   .tech__item_item {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     align-items: center;
 
+    @media screen and (max-width: 768px) {
+      gap: 1rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 30%;
+    }
+
     img {
-      width: 120px;
-      height: 120px;
+      width: 7.5rem;
+      height: 7.5rem;
       object-fit: cover;
       border-radius: 10px;
+
+      @media screen and (max-width: 576px) {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+      }
     }
 
     span {
@@ -40,6 +73,10 @@
       font-size: 1.5rem;
       line-height: 1;
       color: var(--main-color);
+
+      @media screen and (max-width: 768px) {
+        padding-inline: 0;
+      }
     }
   }
 }

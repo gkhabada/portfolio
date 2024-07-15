@@ -64,6 +64,10 @@ html {
   font-size: 16px;
   line-height: 120%;
   overflow-x: hidden;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -94,22 +98,6 @@ a {
   border-radius: 12px;
 }
 
-/* animation */
-
-@keyframes rotage {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    filter: grayscale(100%);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-// new
 
 .container {
   width: min(100%, calc(1200px + 2rem));
@@ -124,6 +112,10 @@ a {
   font-size: 3.5rem;
   line-height: 114%;
   color: var(--main-color);
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 .block__description {
@@ -132,6 +124,10 @@ a {
   line-height: 120%;
   text-align: right;
   color: var(--accent-color);
+
+  @media screen and (max-width: 768px) {
+    text-align: left;
+  }
 }
 
 @mixin gradient-text {

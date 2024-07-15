@@ -1,16 +1,28 @@
 footer {
   display: flex;
   flex-direction: column;
-  padding: 40px 0;
-  gap: 32px;
+  padding-block: 40px;
+  gap: 2rem;
 
   background-color: #161513;
   border-radius: 24px 24px 0 0;
+
+  @media screen and (max-width: 768px) {
+    padding-block: 2rem;
+  }
 
   .footer__block {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      &:last-of-type {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 2rem;
+      }
+    }
   }
 
   .footer__logo {
@@ -24,6 +36,11 @@ footer {
       object-fit: contain;
       background-color: #2A2A31;
       border-radius: 8px;
+
+      @media screen and (max-width: 768px) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
     }
 
     span {
@@ -38,11 +55,20 @@ footer {
   .footer__soc {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 1.5rem;
+
+    @media screen and (max-width: 768px) {
+      gap: 1rem;
+    }
 
     .footer__soc_link {
       width: 44px;
       height: 44px;
+
+      @media screen and (max-width: 768px) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
 
       img {
         width: 100%;
@@ -69,10 +95,16 @@ footer {
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @media screen and (max-width: 768px) {
+      gap: 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   .footer__menu_link {
-    padding: 8px 24px;
+    padding: 0.5rem 1.5rem;
 
     font-style: normal;
     font-weight: 400;
@@ -80,8 +112,14 @@ footer {
     line-height: 120%;
     color: #FFFFFF;
 
-    &:hover {
-      @include gradient-text;
+    @media screen and (max-width: 768px) {
+      padding-inline: 0;
+    }
+
+    @media (hover) {
+      &:hover {
+        @include gradient-text;
+      }
     }
   }
 }

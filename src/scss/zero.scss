@@ -1,16 +1,23 @@
 .zero {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
+
+  @media screen and (max-width: 768px) {
+    padding-block: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 
   .zero__content {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem;
   }
 
   .zero__hi {
@@ -41,19 +48,25 @@
     a {
       color: #42b883;
 
-      &:hover {
-        @include gradient-text;
+      @media (hover) {
+        &:hover {
+          @include gradient-text;
+        }
       }
     }
 
     .about-me__old {
-      padding-left: 4px;
+      padding-left: 0.25rem;
     }
   }
 
   .zero__actions {
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
+
+    @media screen and (max-width: 768px) {
+      gap: 0.75rem;
+    }
   }
 
   .zero__link {
@@ -67,30 +80,35 @@
     line-height: 120%;
 
     &--github {
-      padding: 16px 32px;
+      padding: 1rem 2rem;
       background-color: var(--main-color);
       color: var(--main-bg);
 
-      &:hover {
-        background: var(--gradient);
+      @media (hover) {
+        &:hover {
+          background: var(--gradient);
+        }
       }
     }
 
     &--telegram {
-      padding: 14px 30px;
+      padding: calc(1rem - 2px) calc(2rem - 2px);
       border: 2px solid var(--main-color);
       background-color: var(--main-bg);
       color: var(--main-color);
 
-      &:hover {
-        @include gradient-text;
+      @media (hover) {
+        &:hover {
+          @include gradient-text;
+        }
       }
     }
   }
 
   .zero__image {
-    width: 430px;
-    height: 430px;
+    max-width: 430px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center;
     border-radius: 3.5rem;
