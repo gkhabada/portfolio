@@ -2,16 +2,34 @@ import './scss/main.scss';
 
 document.addEventListener('DOMContentLoaded', function() {
   // zero image animations
-  const zeroImage = document.querySelector('.zero__image');
-  zeroImage.addEventListener('mouseover', () => {
-    if (zeroImage.classList.contains('zero__image--circle')) {
-      zeroImage.classList.add('zero__image--square');
-      zeroImage.classList.remove('zero__image--circle');
+
+  // [1, 2, 3, 4, 5, 6, 7].forEach((i) => (new Image().src = `./images/myself/${i}.webp`));
+
+  const imagesCount = 7;
+  let currentImageNumber = 1;
+  const zeroImageElem = document.querySelector('.zero__image');
+  let animated = false;
+  const zeroImageAnimationFunc = (event) => {
+    event.preventDefault();
+    if (animated) return;
+
+    animated = true;
+    setTimeout(() => { animated = false; }, 1000);
+
+    const nextImageNumber = currentImageNumber + 1 > imagesCount ? 1 : currentImageNumber + 1;
+    zeroImageElem.src = `./images/myself/${nextImageNumber}.webp`;
+    currentImageNumber = nextImageNumber;
+
+    if (zeroImageElem.classList.contains('zero__image--circle')) {
+      zeroImageElem.classList.add('zero__image--square');
+      zeroImageElem.classList.remove('zero__image--circle');
     } else {
-      zeroImage.classList.remove('zero__image--square');
-      zeroImage.classList.add('zero__image--circle');
+      zeroImageElem.classList.remove('zero__image--square');
+      zeroImageElem.classList.add('zero__image--circle');
     }
-  });
+  };
+  zeroImageElem.addEventListener('mouseover', zeroImageAnimationFunc);
+  zeroImageElem.addEventListener('touchend', zeroImageAnimationFunc);
 
   // footer year
   const now = new Date();
