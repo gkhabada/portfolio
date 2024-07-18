@@ -78,6 +78,7 @@ body {
 
   position: relative;
   background-color: var(--main-bg);
+  overflow-x: hidden;
 
   @media screen and (max-width: 768px) {
     gap: 5rem;
