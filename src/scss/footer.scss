@@ -77,8 +77,10 @@ footer {
         border-radius: 8px;
         background-color: #2A2A31;
 
-        &:hover {
-          background: var(--gradient);
+        @media (hover) {
+          &:hover {
+            background: var(--gradient);
+          }
         }
       }
     }
