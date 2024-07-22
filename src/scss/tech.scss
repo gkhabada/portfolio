@@ -53,6 +53,12 @@
       width: 30%;
     }
 
+    @media (hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     img {
       width: 7.5rem;
       height: 7.5rem;
