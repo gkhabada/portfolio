@@ -207,6 +207,26 @@
     color: #C5C5C5;
   }
 
+  a.company__name {
+    position: relative;
+    width: fit-content;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      height: 1px;
+      width: 100%;
+      background: #C5C5C5;
+      transition: 200ms;
+    }
+
+    &:hover::after {
+      background: var(--gradient);
+    }
+  }
+
   &__logo {
     width: 236px;
     height: 236px;
